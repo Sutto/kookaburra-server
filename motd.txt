@@ -1,0 +1,11 @@
+Welcome to Cockatoo 0.1
+
+		     )/_
+		    <' \
+		    /)  )
+		---/'-""---
+
+Cockatoo is build on ruby-ircd
+w/ a few customization
+
+ascii art from the intarwebs!
