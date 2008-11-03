@@ -15,7 +15,7 @@ $config['hostname'] = Socket.gethostname.split(/\./).shift
 $config['starttime'] = Time.now.to_s
 $config['nick-tries'] = 5
 
-$verbose = ARGV.shift || true
+$verbose = ARGV.shift || false
     
 CHANNEL = /^[#\$&]+/
 PREFIX  = /^:[^ ]+ +(.+)$/
@@ -910,6 +910,7 @@ if __FILE__ == $0
             end
         end
         trap("INT"){ 
+            $message_server.dump
             s.carp "killing #{$$}"
             system("kill -9 #{$$}")
             s.shutdown

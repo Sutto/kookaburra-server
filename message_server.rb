@@ -15,7 +15,7 @@ class MessageServer
   def all_messages(limit = 100)
     m = []
     @mutex.synchronize do
-      m = @messages.values.select { |m| m.target =~ /^[#\$&]+/ }
+      m = @messages.values.flatten.select { |m| m.target =~ /^[#\$&]+/ }
     end
     return formatted(m)[0..(limit - 1)]
   end
@@ -88,7 +88,28 @@ class MessageServer
   end
   
   def self.start
-    self.new.start
+    c = self.new
+    c.load
+    c.start
+  end
+  
+  def dump
+    carp  "Dumping Data"
+    File.open("messages.yml", "w+") do |f|
+      f.write Marshal.dump(@messages)
+    end
+  end
+  
+  def load
+    if File.exist?("messages.yml")
+      carp "Loading data"
+      c = File.read("messages.yml")
+      @messages = Marshal.load(c)
+      carp "Data loaded!"
+    end
+  rescue
+    carp "Error loading data"
+    @messages = {}
   end
   
 end
