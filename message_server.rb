@@ -3,9 +3,19 @@ require 'drb'
 class MessageServer
   include NetUtils
   
-  Message = Struct.new(:from, :target, :content, :created_at, :viewed)
+  @@base_id = 0
   
-  MESSAGE_LIMIT = 250
+  def self.next_id; @@base_id += 1; end
+  
+  
+  Message = Struct.new(:message_id, :from, :target, :content, :created_at, :viewed)
+  
+  # Limit to 1000 messages per a queue.
+  MESSAGE_LIMIT = 1000
+  
+  def base_id
+    @@base_id
+  end
   
   def initialize
     @mutex    = Mutex.new
@@ -15,7 +25,7 @@ class MessageServer
   def all_messages(limit = 100)
     m = []
     @mutex.synchronize do
-      m = @messages.values.flatten.select { |m| m.target =~ /^[#\$&]+/ }
+      m = @messages.values.flatten
     end
     return formatted(m)[0..(limit - 1)]
   end
@@ -23,16 +33,16 @@ class MessageServer
   def messages_for(chan)
     m = []
     @mutex.synchronize do
-      m = @messages[chan] || []
+      m = @messages[chan.downcase] || []
     end
     formatted m
   end
   
   def append_message(from, to, contents, viewed = true)
     @mutex.synchronize do
-      messages = (@messages[to] ||= [])
+      messages = (@messages[to.downcase] ||= [])
       messages.shift if messages.length == 250
-      messages << ::MessageServer::Message.new(from, to, contents, Time.now, viewed)
+      messages << ::MessageServer::Message.new(MessageServer.next_id, from, to, contents, Time.now, viewed)
     end
   end
   
@@ -65,21 +75,25 @@ class MessageServer
       carp "Sending privmsg (self) to #{to} from #{from} w/ '#{text}'"
       user_from.handle_privmsg to, text
     end
-    return true
+    return [@@base_id, from, to, text, Time.now, true]
   end
   
   def mark_as_viewed!(user)
     @mutex.synchronize do
-      (@messages[user] ||= []).each { |m| m.viewed = true}
+      (@messages[user.downcase] ||= []).each { |m| m.viewed = true}
     end
   end
   
   def unviewed_for(user)
-    return @mutex.synchronize { (@messages[user] ||= []).select { |m| m.viewed = true} }
+    return @mutex.synchronize { (@messages[user.downcase] ||= []).select { |m| m.viewed = true} }
   end
   
   def formatted(m = [])
-    return m.sort_by { |m| m.created_at }.map { |message| [message.from, message.target, message.content, message.created_at, message.viewed ] }
+    return filter_public(m).sort_by { |m| m.created_at }.map { |message| [message.message_id, message.from, message.target, message.content, message.created_at, message.viewed ] }
+  end
+  
+  def filter_public(m = [])
+    m.select { |m| m.target =~ /^[#\$&]+/ }
   end
   
   def start
@@ -95,20 +109,24 @@ class MessageServer
   
   def dump
     carp  "Dumping Data"
-    File.open("messages.yml", "w+") do |f|
+    File.open("messages.data", "w+") do |f|
       f.write Marshal.dump(@messages)
     end
   end
   
   def load
-    if File.exist?("messages.yml")
+    if File.exist?("messages.data")
       carp "Loading data"
-      c = File.read("messages.yml")
+      c = File.read("messages.data")
       @messages = Marshal.load(c)
+      carp "Messages: #{@messages.class} => #{@messages.size}"
+      @@base_id = @messages.values.flatten.map { |m| m.message_id }.max || 0
       carp "Data loaded!"
+      carp "Base id: #{@@base_id}"
     end
-  rescue
+  rescue Exception => e
     carp "Error loading data"
+    carp e
     @messages = {}
   end
   
