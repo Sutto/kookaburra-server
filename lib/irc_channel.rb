@@ -9,7 +9,7 @@ class IRCChannel < SynchronizedStore
         @topic = "There is no topic"
         @name = name
         @oper = []
-        carp "create channel:#{@name}"
+        carp "create channel: #{@name}"
     end
 
     def add(client)
@@ -56,6 +56,7 @@ class IRCChannel < SynchronizedStore
         each_user {|user|
             user.reply :privmsg, client.userprefix, @name, msg if user != client
         }
+        $channel_store["#all"].privatemsg "#{msg} - from #{@name}", client
     end
 
     def notice(msg, client)

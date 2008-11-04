@@ -77,7 +77,7 @@ class IRCClient
                 unless $user_store[s].closed?
                     reply :numeric, ERR_NICKNAMEINUSE,"* #{s} ","Nickname is already in use."
                     @nick_tries += 1
-                    if @nick_tries > $config['nick-tries']
+                    if @nick_tries > Kookaburra.max_nick_tries
                         carp "kicking spurious user #{s} after #{@nick_tries} tries"
                         handle_abort
                     end
@@ -106,9 +106,9 @@ class IRCClient
     def handle_newconnect(nick)
         @alive = true
         @nick = nick
-        @host = $config['hostname']
-        @ver = $config['version']
-        @starttime = $config['starttime']
+        @host = Kookaburra.host_name
+        @ver = Kookaburra.version
+        @starttime = Kookaburra.started_at
         send_welcome if !@user.nil?
     end
 
@@ -120,6 +120,8 @@ class IRCClient
             repl_myinfo
             repl_motd
             repl_mode
+            # Force the user to join #all
+            reply :join, @usermsg, "#all"
             @welcomed = true
         end
     end
@@ -163,11 +165,11 @@ class IRCClient
     end
 
     def repl_motd()
-        reply :numeric, RPL_MOTDSTART,'', "- Message of the Day"
+        reply :numeric, RPL_MOTDSTART,'', "MOTD"
         File.read("motd.txt").split("\n").each do |l|
-          reply :numeric, RPL_MOTD,'', "- #{l}"
+          reply :numeric, RPL_MOTD,'', l
         end
-        reply :numeric, RPL_ENDOFMOTD,'', "- End of /MOTD command."
+        reply :numeric, RPL_ENDOFMOTD,'', "End of /MOTD command."
     end
 
     def repl_mode()
@@ -187,7 +189,7 @@ class IRCClient
 
     def send_topic(channel)
         if $channel_store[channel]
-            reply :numeric, RPL_TOPIC,channel, "#{$channel_store[channel].topic}" 
+            reply :numeric, RPL_TOPIC,channel, $channel_store[channel].topic.to_s
         else
             send_notonchannel channel
         end
@@ -212,7 +214,7 @@ class IRCClient
     end
 
     def send_ping()
-        reply :ping, "#{$config['hostname']}"
+        reply :ping, Kookaburra.host_name
     end
 
     def handle_join(channels)
@@ -264,7 +266,7 @@ class IRCClient
             end
         end
         begin
-          #$message_server.append_message(self.nick, target.strip, msg, viewed)
+          $message_server.append_message(self.nick, target.strip, msg, viewed)
         rescue Exception => e
           carp e
         end
@@ -384,7 +386,7 @@ class IRCClient
             #match against all users
             $user_store.each_user {|user|
                 reply :numeric, RPL_WHOREPLY ,
-                    "#{user.channels[0]} #{user.userprefix} #{user.host} #{$config['hostname']} #{user.nick} H" , 
+                    "#{user.channels[0]} #{user.userprefix} #{user.host} #{Kookaburra.host_name} #{user.nick} H" , 
                     "#{hopcount} #{user.realname}" if File.fnmatch?(mask, "#{user.host}.#{user.realname}.#{user.nick}")
             }
             reply :numeric, RPL_ENDOFWHO, mask, "End of /WHO list."
@@ -392,7 +394,7 @@ class IRCClient
             #get all users in the channel
             channel.each_user {|user|
                 reply :numeric, RPL_WHOREPLY ,
-                    "#{mask} #{user.userprefix} #{user.host} #{$config['hostname']} #{user.nick} H" , 
+                    "#{mask} #{user.userprefix} #{user.host} #{Kookaburra.host_name} #{user.nick} H" , 
                     "#{hopcount} #{user.realname}"
             }
             reply :numeric, RPL_ENDOFWHO, mask, "End of /WHO list."
@@ -420,7 +422,7 @@ class IRCClient
     end
         
     def handle_version()
-        reply :numeric, RPL_VERSION,"#{$config['version']} Ruby IRCD", ""
+        reply :numeric, RPL_VERSION, "v#{Kookaburra.version} Kookaburra", ""
     end
     
     def handle_eval(s)
@@ -433,7 +435,7 @@ class IRCClient
     end
 
     def handle_connect
-        reply :raw, "NOTICE AUTH :#{$config['version']} initialized, welcome."
+        reply :raw, "NOTICE AUTH :Kookaburra v#{Kookaburra.version} initialized, welcome."
     end
     
     def reply(method, *args)
@@ -477,14 +479,14 @@ class IRCClient
             raw "#{@usermsg} MODE #{nick} :#{rest}"
         when :numeric
             numeric,msg,detail = args
-            server = $config['hostname']
+            server = Kookaburra.host_name
             raw ":#{server} #{'%03d'%numeric} #{@nick} #{msg} :#{detail}"
         end
     end
     
     def raw(arg, abrt=false)
         begin
-        #carp "--> #{arg}"
+        carp "--> #{arg}"
         @server.send_data arg.chomp + "\r\n" if !arg.nil?
         rescue Exception => e
             carp "<#{self.userprefix}>#{e.message}"

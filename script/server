@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+
+base_path = File.expand_path(File.join(File.dirname(__FILE__), ".."))
+require File.join(base_path, "lib/ircd")
+
+Kookaburra.root = base_path
+
+Kookaburra.setup!
+Kookaburra.logger.info "Starting Kookaburra"
+
+MessageServer.start
+
+begin
+  
+    EventMachine::run do
+      EventMachine::add_periodic_timer(300) { IRCServer.ping_all }
+      EventMachine::start_server "0.0.0.0", 6667, IRCServer
+    end
+rescue Exception => e
+  Kookaburra.logger.debug_exception e
+end

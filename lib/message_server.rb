@@ -27,7 +27,7 @@ class MessageServer
     @mutex.synchronize do
       m = @messages.values.flatten
     end
-    return formatted(m)[0..(limit - 1)]
+    return formatted(m)[-limit..-1]
   end
   
   def messages_for(chan)
@@ -41,7 +41,7 @@ class MessageServer
   def append_message(from, to, contents, viewed = true)
     @mutex.synchronize do
       messages = (@messages[to.downcase] ||= [])
-      messages.shift if messages.length == 250
+      messages.shift if messages.length >= MESSAGE_LIMIT
       messages << ::MessageServer::Message.new(MessageServer.next_id, from, to, contents, Time.now, viewed)
     end
   end

@@ -1,0 +1,156 @@
+[INFO] Starting Kookaburra
+[DEBUG] Loading data
+[DEBUG] Messages: Hash => 11
+[DEBUG] Data loaded!
+[DEBUG] Base id: 482
+[DEBUG] initializing connection from rumble.dev
+[DEBUG] --> NOTICE AUTH :Kookaburra v0.1 initialized, welcome.
+[DEBUG] initializing connection from rumble.dev
+[DEBUG] --> NOTICE AUTH :Kookaburra v0.1 initialized, welcome.
+[DEBUG] Recieved line: NICK SuttoL
+[DEBUG] <-- NICK SuttoL
+[DEBUG] Processing line
+[DEBUG] nick => SuttoL
+[DEBUG] Handled
+[DEBUG] Line processed in 0.000926971435546875 seconds
+[DEBUG] Recieved line: NICK jesus
+[DEBUG] <-- NICK jesus
+[DEBUG] Processing line
+[DEBUG] nick => jesus
+[DEBUG] Handled
+[DEBUG] Line processed in 0.000729084014892578 seconds
+[DEBUG] Recieved line: USER SuttoL 8 * :Darcy Laycock
+[DEBUG] <-- USER SuttoL 8 * :Darcy Laycock
+[DEBUG] Processing line
+[DEBUG] --> :0xDEADBEEF 001 SuttoL SuttoL :Welcome to Cockatoo - SuttoL!SuttoL@rumble.dev
+[DEBUG] --> :0xDEADBEEF 002 SuttoL SuttoL :Your host is 0xDEADBEEF, running version 0.1
+[DEBUG] --> :0xDEADBEEF 003 SuttoL SuttoL :This server was created Tue Nov 04 21:01:35 +0900 2008
+[DEBUG] --> :0xDEADBEEF 004 SuttoL SuttoL :0xDEADBEEF 0.1 aAbBcCdDeEfFGhHiIjkKlLmMnNopPQrRsStUvVwWxXyYzZ0123459*@ bcdefFhiIklmnoPqstv
+[DEBUG] --> :0xDEADBEEF 375 SuttoL  :MOTD
+[DEBUG] --> :0xDEADBEEF 372 SuttoL  :Welcome to Kookaburra 0.1
+[DEBUG] --> :0xDEADBEEF 372 SuttoL  :
+[DEBUG] --> :0xDEADBEEF 372 SuttoL  :		     )/_
+[DEBUG] --> :0xDEADBEEF 372 SuttoL  :		    <' \
+[DEBUG] --> :0xDEADBEEF 372 SuttoL  :		    /)  )
+[DEBUG] --> :0xDEADBEEF 372 SuttoL  :		---/'-""---
+[DEBUG] --> :0xDEADBEEF 372 SuttoL  :
+[DEBUG] --> :0xDEADBEEF 372 SuttoL  :Cockatoo is build on ruby-ircd
+[DEBUG] --> :0xDEADBEEF 372 SuttoL  :w/ a few customization
+[DEBUG] --> :0xDEADBEEF 372 SuttoL  :
+[DEBUG] --> :0xDEADBEEF 372 SuttoL  :ascii art from the intarwebs!
+[DEBUG] --> :0xDEADBEEF 376 SuttoL  :End of /MOTD command.
+[DEBUG] --> :SuttoL!~SuttoL@rumble.dev JOIN :#all
+[DEBUG] Handled
+[DEBUG] Line processed in 0.00223398208618164 seconds
+[DEBUG] Recieved line: USER jesus 8 * :Darcy Laycock
+[DEBUG] <-- USER jesus 8 * :Darcy Laycock
+[DEBUG] Processing line
+[DEBUG] --> :0xDEADBEEF 001 jesus jesus :Welcome to Cockatoo - jesus!jesus@rumble.dev
+[DEBUG] --> :0xDEADBEEF 002 jesus jesus :Your host is 0xDEADBEEF, running version 0.1
+[DEBUG] --> :0xDEADBEEF 003 jesus jesus :This server was created Tue Nov 04 21:01:35 +0900 2008
+[DEBUG] --> :0xDEADBEEF 004 jesus jesus :0xDEADBEEF 0.1 aAbBcCdDeEfFGhHiIjkKlLmMnNopPQrRsStUvVwWxXyYzZ0123459*@ bcdefFhiIklmnoPqstv
+[DEBUG] --> :0xDEADBEEF 375 jesus  :MOTD
+[DEBUG] --> :0xDEADBEEF 372 jesus  :Welcome to Kookaburra 0.1
+[DEBUG] --> :0xDEADBEEF 372 jesus  :
+[DEBUG] --> :0xDEADBEEF 372 jesus  :		     )/_
+[DEBUG] --> :0xDEADBEEF 372 jesus  :		    <' \
+[DEBUG] --> :0xDEADBEEF 372 jesus  :		    /)  )
+[DEBUG] --> :0xDEADBEEF 372 jesus  :		---/'-""---
+[DEBUG] --> :0xDEADBEEF 372 jesus  :
+[DEBUG] --> :0xDEADBEEF 372 jesus  :Cockatoo is build on ruby-ircd
+[DEBUG] --> :0xDEADBEEF 372 jesus  :w/ a few customization
+[DEBUG] --> :0xDEADBEEF 372 jesus  :
+[DEBUG] --> :0xDEADBEEF 372 jesus  :ascii art from the intarwebs!
+[DEBUG] --> :0xDEADBEEF 376 jesus  :End of /MOTD command.
+[DEBUG] --> :jesus!~jesus@rumble.dev JOIN :#all
+[DEBUG] Handled
+[DEBUG] Line processed in 0.00167489051818848 seconds
+[DEBUG] Recieved line: JOIN #wootsicles,#eotw,#all,#general 
+[DEBUG] <-- JOIN #wootsicles,#eotw,#all,#general 
+[DEBUG] Processing line
+[DEBUG] create channel: #wootsicles
+[DEBUG] --> :SuttoL!~SuttoL@rumble.dev JOIN :#wootsicles
+[DEBUG] --> :0xDEADBEEF 332 SuttoL #wootsicles :There is no topic
+[DEBUG] --> :0xDEADBEEF 353 SuttoL = #wootsicles :@SuttoL
+[DEBUG] --> :0xDEADBEEF 366 SuttoL #wootsicles  :End of /NAMES list.
+[DEBUG] create channel: #eotw
+[DEBUG] --> :SuttoL!~SuttoL@rumble.dev JOIN :#eotw
+[DEBUG] --> :0xDEADBEEF 332 SuttoL #eotw :There is no topic
+[DEBUG] --> :0xDEADBEEF 353 SuttoL = #eotw :@SuttoL
+[DEBUG] --> :0xDEADBEEF 366 SuttoL #eotw  :End of /NAMES list.
+[DEBUG] --> :0xDEADBEEF 332 SuttoL #all :All that is posted on Kookaburra
+[DEBUG] --> :0xDEADBEEF 353 SuttoL = #all : SuttoL  jesus
+[DEBUG] --> :0xDEADBEEF 366 SuttoL #all  :End of /NAMES list.
+[DEBUG] create channel: #general
+[DEBUG] --> :SuttoL!~SuttoL@rumble.dev JOIN :#general
+[DEBUG] --> :0xDEADBEEF 332 SuttoL #general :There is no topic
+[DEBUG] --> :0xDEADBEEF 353 SuttoL = #general :@SuttoL
+[DEBUG] --> :0xDEADBEEF 366 SuttoL #general  :End of /NAMES list.
+[DEBUG] Handled
+[DEBUG] Line processed in 0.00291204452514648 seconds
+[DEBUG] Recieved line: JOIN #eotw,#all 
+[DEBUG] <-- JOIN #eotw,#all 
+[DEBUG] Processing line
+[DEBUG] --> :jesus!~jesus@rumble.dev JOIN :#eotw
+[DEBUG] --> :jesus!~jesus@rumble.dev JOIN :#eotw
+[DEBUG] --> :0xDEADBEEF 332 jesus #eotw :There is no topic
+[DEBUG] --> :0xDEADBEEF 353 jesus = #eotw :@SuttoL jesus
+[DEBUG] --> :0xDEADBEEF 366 jesus #eotw  :End of /NAMES list.
+[DEBUG] --> :0xDEADBEEF 332 jesus #all :All that is posted on Kookaburra
+[DEBUG] --> :0xDEADBEEF 353 jesus = #all : SuttoL  jesus
+[DEBUG] --> :0xDEADBEEF 366 jesus #all  :End of /NAMES list.
+[DEBUG] Handled
+[DEBUG] Line processed in 0.00154495239257812 seconds
+[DEBUG] Recieved line: MODE #wootsicles +sn
+[DEBUG] <-- MODE #wootsicles +sn
+[DEBUG] Processing line
+[DEBUG] --> :SuttoL!~SuttoL@rumble.dev MODE #wootsicles :+sn
+[DEBUG] Handled
+[DEBUG] Line processed in 0.000558853149414062 seconds
+[DEBUG] Recieved line: MODE #eotw
+[DEBUG] <-- MODE #eotw
+[DEBUG] Processing line
+[DEBUG] --> :jesus!~jesus@rumble.dev MODE #eotw :
+[DEBUG] Handled
+[DEBUG] Line processed in 0.000540971755981445 seconds
+[DEBUG] Recieved line: MODE #all
+[DEBUG] <-- MODE #all
+[DEBUG] Processing line
+[DEBUG] --> :jesus!~jesus@rumble.dev MODE #all :
+[DEBUG] Handled
+[DEBUG] Line processed in 0.0031120777130127 seconds
+[DEBUG] Recieved line: WHO #eotw
+[DEBUG] <-- WHO #eotw
+[DEBUG] Processing line
+[DEBUG] --> :0xDEADBEEF 352 jesus #eotw :SuttoL!~SuttoL@rumble.dev rumble.dev 0xDEADBEEF SuttoL H :0 Darcy Laycock
+[DEBUG] --> :0xDEADBEEF 352 jesus #eotw :jesus!~jesus@rumble.dev rumble.dev 0xDEADBEEF jesus H :0 Darcy Laycock
+[DEBUG] --> :0xDEADBEEF 315 jesus #eotw :End of /WHO list.
+[DEBUG] Handled
+[DEBUG] Line processed in 0.00125408172607422 seconds
+[DEBUG] Recieved line: MODE #eotw +sn
+[DEBUG] <-- MODE #eotw +sn
+[DEBUG] Processing line
+[DEBUG] --> :SuttoL!~SuttoL@rumble.dev MODE #eotw :+sn
+[DEBUG] Handled
+[DEBUG] Line processed in 0.000352144241333008 seconds
+[DEBUG] Recieved line: MODE #all
+[DEBUG] <-- MODE #all
+[DEBUG] Processing line
+[DEBUG] --> :SuttoL!~SuttoL@rumble.dev MODE #all :
+[DEBUG] Handled
+[DEBUG] Line processed in 0.000772953033447266 seconds
+[DEBUG] Recieved line: WHO #all
+[DEBUG] <-- WHO #all
+[DEBUG] Processing line
+[DEBUG] --> :0xDEADBEEF 352 jesus #all :SuttoL!~SuttoL@rumble.dev rumble.dev 0xDEADBEEF SuttoL H :0 Darcy Laycock
+[DEBUG] --> :0xDEADBEEF 352 jesus #all :jesus!~jesus@rumble.dev rumble.dev 0xDEADBEEF jesus H :0 Darcy Laycock
+[DEBUG] --> :0xDEADBEEF 315 jesus #all :End of /WHO list.
+[DEBUG] Handled
+[DEBUG] Line processed in 0.00217700004577637 seconds
+[DEBUG] Recieved line: MODE #general +sn
+[DEBUG] <-- MODE #general +sn
+[DEBUG] Processing line
+[DEBUG] --> :SuttoL!~SuttoL@rumble.dev MODE #general :+sn
+[DEBUG] Handled
+[DEBUG] Line processed in 0.00123405456542969 seconds
+[DEBUG] Dumping Data
