@@ -11,6 +11,7 @@ new features:
 # A proper logger
 # proper option support
 # settings via configatron
+# Uses eventmachine for the networking
 
 To use, try:
 
