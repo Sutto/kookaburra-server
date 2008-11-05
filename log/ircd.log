@@ -1062,3 +1062,172 @@
 [DEBUG] <<< PONG 0xDEADBEEF
 [INFO]  Got pong: 0xDEADBEEF
 [ERROR] Exception: SIGHUP
+[INFO]  Starting Kookaburra
+[INFO]  Loading stored messages
+[INFO]  Writing out messages to file
+[INFO]  Starting Kookaburra
+[INFO]  Loading stored messages
+[ERROR] Exception: /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/irc/client.rb:67: syntax error, unexpected kEND, expecting '}'
+/Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/irc/client.rb:76: syntax error, unexpected kELSE, expecting '}'
+/Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/irc/client.rb:93: syntax error, unexpected kEND, expecting '}'
+/Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/irc/client.rb:95: syntax error, unexpected kEND, expecting '}'
+/Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/irc/client.rb:500: syntax error, unexpected kEND, expecting '}'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/irc/server.rb:21:in `post_init'
+[ERROR] >> /opt/local/lib/ruby/gems/1.8/gems/eventmachine-0.12.0/lib/eventmachine.rb:1242:in `new'
+[ERROR] >> /opt/local/lib/ruby/gems/1.8/gems/eventmachine-0.12.0/lib/eventmachine.rb:1235:in `instance_eval'
+[ERROR] >> /opt/local/lib/ruby/gems/1.8/gems/eventmachine-0.12.0/lib/eventmachine.rb:1235:in `new'
+[ERROR] >> /opt/local/lib/ruby/gems/1.8/gems/eventmachine-0.12.0/lib/eventmachine.rb:1074:in `event_callback'
+[ERROR] >> /opt/local/lib/ruby/gems/1.8/gems/eventmachine-0.12.0/lib/eventmachine.rb:224:in `run_machine'
+[ERROR] >> /opt/local/lib/ruby/gems/1.8/gems/eventmachine-0.12.0/lib/eventmachine.rb:224:in `run'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/base_extension.rb:58:in `run!'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/base_extension.rb:44:in `boot_at'
+[ERROR] >> script/server:6
+[INFO]  Starting Kookaburra
+[INFO]  Loading stored messages
+[INFO]  Initializing connection from 'rumble.dev'
+[INFO]  Attemping to set nick to SuttoL
+[ERROR] Exception: uninitialized constant Kookaburra::IRC::SynchronizedStore
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/irc/channel.rb:3
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/irc/client.rb:232:in `handle_join'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/irc/client.rb:225:in `each'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/irc/client.rb:225:in `handle_join'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/irc/server.rb:55:in `handle_client_input'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/irc/server.rb:27:in `receive_line'
+[ERROR] >> /opt/local/lib/ruby/gems/1.8/gems/eventmachine-0.12.0/lib/protocols/line_and_text.rb:43:in `receive_data'
+[ERROR] >> /opt/local/lib/ruby/gems/1.8/gems/eventmachine-0.12.0/lib/protocols/line_and_text.rb:42:in `each'
+[ERROR] >> /opt/local/lib/ruby/gems/1.8/gems/eventmachine-0.12.0/lib/protocols/line_and_text.rb:42:in `receive_data'
+[ERROR] >> /opt/local/lib/ruby/gems/1.8/gems/eventmachine-0.12.0/lib/eventmachine.rb:224:in `run_machine'
+[ERROR] >> /opt/local/lib/ruby/gems/1.8/gems/eventmachine-0.12.0/lib/eventmachine.rb:224:in `run'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/base_extension.rb:58:in `run!'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/base_extension.rb:44:in `boot_at'
+[ERROR] >> script/server:6
+[INFO]  Writing out messages to file
+[INFO]  Starting Kookaburra
+[INFO]  Loading stored messages
+[INFO]  Initializing connection from 'rumble.dev'
+[INFO]  Attemping to set nick to SuttoL
+[ERROR] Exception: wrong number of arguments (1 for 0)
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/irc/channel.rb:9:in `initialize'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/irc/channel.rb:9:in `initialize'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/irc/client.rb:232:in `new'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/irc/client.rb:232:in `handle_join'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/irc/client.rb:225:in `each'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/irc/client.rb:225:in `handle_join'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/irc/server.rb:55:in `handle_client_input'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/irc/server.rb:27:in `receive_line'
+[ERROR] >> /opt/local/lib/ruby/gems/1.8/gems/eventmachine-0.12.0/lib/protocols/line_and_text.rb:43:in `receive_data'
+[ERROR] >> /opt/local/lib/ruby/gems/1.8/gems/eventmachine-0.12.0/lib/protocols/line_and_text.rb:42:in `each'
+[ERROR] >> /opt/local/lib/ruby/gems/1.8/gems/eventmachine-0.12.0/lib/protocols/line_and_text.rb:42:in `receive_data'
+[ERROR] >> /opt/local/lib/ruby/gems/1.8/gems/eventmachine-0.12.0/lib/eventmachine.rb:224:in `run_machine'
+[ERROR] >> /opt/local/lib/ruby/gems/1.8/gems/eventmachine-0.12.0/lib/eventmachine.rb:224:in `run'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/base_extension.rb:58:in `run!'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/base_extension.rb:44:in `boot_at'
+[ERROR] >> script/server:6
+[INFO]  Writing out messages to file
+[INFO]  Starting Kookaburra
+[INFO]  Loading stored messages
+[INFO]  Initializing connection from 'rumble.dev'
+[INFO]  Attemping to set nick to SuttoL
+[INFO]  Creating channel #webjam
+[ERROR] Exception: undefined method `include?' for nil:NilClass
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/irc/channel.rb:87:in `is_member?'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/irc/channel.rb:26:in `join'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/irc/client.rb:231:in `handle_join'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/irc/client.rb:223:in `each'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/irc/client.rb:223:in `handle_join'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/irc/server.rb:55:in `handle_client_input'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/irc/server.rb:27:in `receive_line'
+[ERROR] >> /opt/local/lib/ruby/gems/1.8/gems/eventmachine-0.12.0/lib/protocols/line_and_text.rb:43:in `receive_data'
+[ERROR] >> /opt/local/lib/ruby/gems/1.8/gems/eventmachine-0.12.0/lib/protocols/line_and_text.rb:42:in `each'
+[ERROR] >> /opt/local/lib/ruby/gems/1.8/gems/eventmachine-0.12.0/lib/protocols/line_and_text.rb:42:in `receive_data'
+[ERROR] >> /opt/local/lib/ruby/gems/1.8/gems/eventmachine-0.12.0/lib/eventmachine.rb:224:in `run_machine'
+[ERROR] >> /opt/local/lib/ruby/gems/1.8/gems/eventmachine-0.12.0/lib/eventmachine.rb:224:in `run'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/base_extension.rb:58:in `run!'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/base_extension.rb:44:in `boot_at'
+[ERROR] >> script/server:6
+[INFO]  Writing out messages to file
+[INFO]  Starting Kookaburra
+[INFO]  Loading stored messages
+[INFO]  Initializing connection from 'rumble.dev'
+[INFO]  Attemping to set nick to SuttoL
+[ERROR] Exception: undefined method `<<' for {}:Hash
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/ts_store.rb:11:in `__send__'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/ts_store.rb:11:in `method_missing'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/ts_store.rb:11:in `synchronize'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/ts_store.rb:11:in `method_missing'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/irc/client.rb:57:in `handle_nick'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/irc/server.rb:45:in `handle_client_input'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/irc/server.rb:27:in `receive_line'
+[ERROR] >> /opt/local/lib/ruby/gems/1.8/gems/eventmachine-0.12.0/lib/protocols/line_and_text.rb:43:in `receive_data'
+[ERROR] >> /opt/local/lib/ruby/gems/1.8/gems/eventmachine-0.12.0/lib/protocols/line_and_text.rb:42:in `each'
+[ERROR] >> /opt/local/lib/ruby/gems/1.8/gems/eventmachine-0.12.0/lib/protocols/line_and_text.rb:42:in `receive_data'
+[ERROR] >> /opt/local/lib/ruby/gems/1.8/gems/eventmachine-0.12.0/lib/eventmachine.rb:224:in `run_machine'
+[ERROR] >> /opt/local/lib/ruby/gems/1.8/gems/eventmachine-0.12.0/lib/eventmachine.rb:224:in `run'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/base_extension.rb:58:in `run!'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/base_extension.rb:44:in `boot_at'
+[ERROR] >> script/server:6
+[INFO]  Creating channel #webjam
+[INFO]  Creating channel #general
+[ERROR] Exception: undefined method `each_user' for nil:NilClass
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/irc/catch_all.rb:19:in `each_user'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/irc/client.rb:211:in `send_nameslist'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/irc/client.rb:233:in `handle_join'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/irc/client.rb:223:in `each'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/irc/client.rb:223:in `handle_join'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/irc/server.rb:55:in `handle_client_input'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/irc/server.rb:27:in `receive_line'
+[ERROR] >> /opt/local/lib/ruby/gems/1.8/gems/eventmachine-0.12.0/lib/protocols/line_and_text.rb:43:in `receive_data'
+[ERROR] >> /opt/local/lib/ruby/gems/1.8/gems/eventmachine-0.12.0/lib/protocols/line_and_text.rb:42:in `each'
+[ERROR] >> /opt/local/lib/ruby/gems/1.8/gems/eventmachine-0.12.0/lib/protocols/line_and_text.rb:42:in `receive_data'
+[ERROR] >> /opt/local/lib/ruby/gems/1.8/gems/eventmachine-0.12.0/lib/eventmachine.rb:224:in `run_machine'
+[ERROR] >> /opt/local/lib/ruby/gems/1.8/gems/eventmachine-0.12.0/lib/eventmachine.rb:224:in `run'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/base_extension.rb:58:in `run!'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/base_extension.rb:44:in `boot_at'
+[ERROR] >> script/server:6
+[INFO]  Writing out messages to file
+[INFO]  Starting Kookaburra
+[INFO]  Loading stored messages
+[INFO]  Initializing connection from 'rumble.dev'
+[INFO]  Attemping to set nick to SuttoL
+[ERROR] Exception: undefined method `<<' for {}:Hash
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/ts_store.rb:11:in `__send__'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/ts_store.rb:11:in `method_missing'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/ts_store.rb:11:in `synchronize'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/ts_store.rb:11:in `method_missing'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/irc/client.rb:57:in `handle_nick'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/irc/server.rb:45:in `handle_client_input'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/irc/server.rb:27:in `receive_line'
+[ERROR] >> /opt/local/lib/ruby/gems/1.8/gems/eventmachine-0.12.0/lib/protocols/line_and_text.rb:43:in `receive_data'
+[ERROR] >> /opt/local/lib/ruby/gems/1.8/gems/eventmachine-0.12.0/lib/protocols/line_and_text.rb:42:in `each'
+[ERROR] >> /opt/local/lib/ruby/gems/1.8/gems/eventmachine-0.12.0/lib/protocols/line_and_text.rb:42:in `receive_data'
+[ERROR] >> /opt/local/lib/ruby/gems/1.8/gems/eventmachine-0.12.0/lib/eventmachine.rb:224:in `run_machine'
+[ERROR] >> /opt/local/lib/ruby/gems/1.8/gems/eventmachine-0.12.0/lib/eventmachine.rb:224:in `run'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/base_extension.rb:58:in `run!'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/base_extension.rb:44:in `boot_at'
+[ERROR] >> script/server:6
+[INFO]  Creating channel #webjam
+[INFO]  Creating channel #general
+[ERROR] Exception: undefined method `each_user' for nil:NilClass
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/irc/catch_all.rb:19:in `each_user'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/irc/client.rb:211:in `send_nameslist'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/irc/client.rb:233:in `handle_join'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/irc/client.rb:223:in `each'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/irc/client.rb:223:in `handle_join'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/irc/server.rb:55:in `handle_client_input'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/irc/server.rb:27:in `receive_line'
+[ERROR] >> /opt/local/lib/ruby/gems/1.8/gems/eventmachine-0.12.0/lib/protocols/line_and_text.rb:43:in `receive_data'
+[ERROR] >> /opt/local/lib/ruby/gems/1.8/gems/eventmachine-0.12.0/lib/protocols/line_and_text.rb:42:in `each'
+[ERROR] >> /opt/local/lib/ruby/gems/1.8/gems/eventmachine-0.12.0/lib/protocols/line_and_text.rb:42:in `receive_data'
+[ERROR] >> /opt/local/lib/ruby/gems/1.8/gems/eventmachine-0.12.0/lib/eventmachine.rb:224:in `run_machine'
+[ERROR] >> /opt/local/lib/ruby/gems/1.8/gems/eventmachine-0.12.0/lib/eventmachine.rb:224:in `run'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/base_extension.rb:58:in `run!'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/kookaburra/base_extension.rb:44:in `boot_at'
+[ERROR] >> script/server:6
+[INFO]  Writing out messages to file
+[INFO]  Starting Kookaburra
+[INFO]  Loading stored messages
+[INFO]  Initializing connection from 'rumble.dev'
+[INFO]  Attemping to set nick to SuttoL
+[INFO]  Creating channel #webjam
+[INFO]  Creating channel #general
+[INFO]  Writing out messages to file

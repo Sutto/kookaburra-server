@@ -1,0 +1,20 @@
+h1. Kookaburra - a Ruby IRCD
+
+Kookaburra is an simple open source IRCD written in Ruby.
+
+It's a fork of "ruby-ircd":http://code.google.com/p/ruby-ircd/ with the following
+new features:
+
+# Better layout - proper module hierarchy
+# DRB interface
+# a catch all channel
+# A proper logger
+# proper option support
+# settings via configatron
+
+To use, try:
+
+  sudo gem install eventmachine extlib configatron
+  ./script/server
+
+Kudos!
