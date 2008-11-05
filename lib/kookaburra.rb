@@ -3,7 +3,7 @@ $:.unshift(File.expand_path(File.dirname(__FILE__)))
 require 'rubygems'
 
 # Require our external files.
-require File.join(File.dirname(__FILE__), '../vendor/cooloptions')
+require File.join(File.dirname(__FILE__), '../vendor/trollop')
 
 # Check the gems exist
 gem 'configatron',  '>= 2.0.0'

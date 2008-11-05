@@ -64,10 +64,10 @@ class MessageServer
   end
   
   def remote_message(from, to, text)
-    user_from = $user_store[from]
+    user_from = Kookaburra::Stores.users[from]
     # from is not online, so choose the correct item to do.
     if user_from.nil?
-      target    = (to =~ /^[#\$&]+/ ? $channel_store[to] : $user_store[to])
+      target    = (to =~ /^[#\$&]+/ ? Kookaburra::Stores.channels[to] : Kookaburra::Stores.users[to])
       if !target.nil?
         prefix = ":#{from}!~unknown@cockatoo-server"
         if to =~ /^[#\$&]+/

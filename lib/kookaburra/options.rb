@@ -1,16 +1,14 @@
 module Kookaburra
   class Options
     def self.parse!
-      CoolOptions.parse!("[options]") do |o|
-          o.desc 'Boots up the irc server.'
-          o.on "verbose",   "Log output to STDOUT.", (Kookaburra::Settings.verbose || false)
-          o.on "loglevel", "Set the log level",     :info
-
-          o.after do |r|
-            Kookaburra::Settings.verbose   = r.verbose
-            Kookaburra::Settings.log_level = r.log_level || :info
-          end
-        end
+      opts = Trollop::options do
+        version Kookaburra::VERSION.to_s
+        banner ["A Simplistic IRCD in ruby",  "Usage: ./script/server [options]"].join("\n")
+        opt :verbose, "Log output to STDOUT", :default => !!(Kookaburra::Settings.verbose || false)
+        opt :level,   "What log level to use", :default => Kookaburra::Settings.log_level.to_s, :type => :string
+      end
+      Kookaburra::Settings.verbose   = opts[:verbose]
+      Kookaburra::Settings.log_level = opts[:level].to_sym
     end
   end
 end
