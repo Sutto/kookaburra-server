@@ -1,5 +1,7 @@
 require 'drb'
 
+# Ugly ass DRB message server class.
+# Needs to be seriously refactored.
 class MessageServer
   
   def self.stored_messages_path; File.join(Kookaburra.root, "data/messages"); end

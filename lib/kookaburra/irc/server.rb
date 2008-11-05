@@ -108,8 +108,9 @@ module Kookaburra
       end
 
       def self.ping_all
+        Kookaburra.logger.info "Pinging all users"
         Kookaburra::Stores.users.each_user do |client|
-            client.send_ping
+          client.send_ping
         end
       end
 

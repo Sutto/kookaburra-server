@@ -56,7 +56,9 @@ module Kookaburra
     def run!
       begin
         EventMachine::run do
-          EventMachine::add_periodic_timer(90) { Kookaburra::IRC::Server.ping_all }
+          EventMachine::add_periodic_timer(60) do
+            Kookaburra::IRC::Server.ping_all
+          end
           EventMachine::start_server "0.0.0.0", Kookaburra::Settings.port, Kookaburra::IRC::Server
         end
       rescue Exception => e

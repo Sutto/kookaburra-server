@@ -74,19 +74,13 @@ module Kookaburra
         else
           #check if we are just nicking ourselves.
           unless Kookaburra::Stores.users[s] == self
-            #verify the connectivity of earlier guy
-            unless Kookaburra::Stores.users[s].closed?
-              reply :numeric, Replies::ERR_NICKNAMEINUSE,"* #{s} ","Nickname is already in use."
-              @nick_tries += 1
-              if @nick_tries > Kookaburra::Settings.max_nick_tries
-                Kookaburra.logger.info "Kicking user #{s} after #{@nick_tries} failed nick attempts"
-                handle_abort
-              end
-              return
-            else
-              Kookaburra::Stores.users[s].handle_abort
-              Kookaburra::Stores.users[s] = self
+            reply :numeric, Replies::ERR_NICKNAMEINUSE, "* #{s} ","Nickname is already in use."
+            @nick_tries += 1
+            if @nick_tries > Kookaburra::Settings.max_nick_tries
+              Kookaburra.logger.info "Kicking user #{s} after #{@nick_tries} failed nick attempts"
+              handle_abort
             end
+            return
           end
         end
         @nick_tries = 0
