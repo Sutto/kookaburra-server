@@ -8,6 +8,10 @@ class IRCLogger
     :info  => 3,
     :debug => 0
   }
+  
+  PREFIXES = {}
+  
+  LEVELS.each { |k,v| PREFIXES[k] = "[#{k.to_s.upcase}]".ljust 7 }
 
   COLOURS = {
     :fatal => 31, # red
@@ -19,10 +23,10 @@ class IRCLogger
   
   attr_accessor :level, :file, :verbose
   
-  def initialize(level = :info, verbose = false)
+  def initialize(level = :info, verbose = false, path = File.join(Kookaburra.root, "log/ircd.log"))
     self.level   = level.to_sym
     self.verbose = verbose
-    self.file    = File.open(File.join(Kookaburra.root, "log/ircd.log"), "a+")
+    self.file    = File.open(path, "a+")
   end
   
   def close!
@@ -32,7 +36,7 @@ class IRCLogger
   LEVELS.each do |name, value|
     
     define_method(name) do |message|
-      write "[#{name.to_s.upcase}] #{message}", name if LEVELS[self.level] <= value
+      write "#{PREFIXES[name]} #{message}", name if LEVELS[self.level] <= value
     end
     
     define_method(:"#{name}?") do
@@ -42,9 +46,9 @@ class IRCLogger
   
   def debug_exception(exception)
     
-    debug "Exception: #{exception}"
+    error "Exception: #{exception}"
     exception.backtrace.each do |l|
-      debug ">> #{l}"
+      error ">> #{l}"
     end
     
   end

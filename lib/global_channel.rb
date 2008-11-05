@@ -1,9 +1,7 @@
 class GlobalChannel
-  include NetUtils
   
   def privatemsg(msg, client)
     # Broadcast to all users
-    carp "#{msg} from #{client}"
     $user_store.each_user do |user|
       user.reply :privmsg, client.userprefix, "#all", msg
     end
@@ -30,6 +28,8 @@ class GlobalChannel
   def join(client); true; end
   
   def part(client, msg); true; end
+  
+  def quit(client, msg); true; end
   
   def is_member?(user); true; end
   alias has_nick? is_member?

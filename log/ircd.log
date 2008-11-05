@@ -1,156 +1,1064 @@
-[INFO] Starting Kookaburra
-[DEBUG] Loading data
-[DEBUG] Messages: Hash => 11
-[DEBUG] Data loaded!
-[DEBUG] Base id: 482
-[DEBUG] initializing connection from rumble.dev
-[DEBUG] --> NOTICE AUTH :Kookaburra v0.1 initialized, welcome.
-[DEBUG] initializing connection from rumble.dev
-[DEBUG] --> NOTICE AUTH :Kookaburra v0.1 initialized, welcome.
-[DEBUG] Recieved line: NICK SuttoL
-[DEBUG] <-- NICK SuttoL
-[DEBUG] Processing line
-[DEBUG] nick => SuttoL
-[DEBUG] Handled
-[DEBUG] Line processed in 0.000926971435546875 seconds
-[DEBUG] Recieved line: NICK jesus
-[DEBUG] <-- NICK jesus
-[DEBUG] Processing line
-[DEBUG] nick => jesus
-[DEBUG] Handled
-[DEBUG] Line processed in 0.000729084014892578 seconds
-[DEBUG] Recieved line: USER SuttoL 8 * :Darcy Laycock
-[DEBUG] <-- USER SuttoL 8 * :Darcy Laycock
-[DEBUG] Processing line
-[DEBUG] --> :0xDEADBEEF 001 SuttoL SuttoL :Welcome to Cockatoo - SuttoL!SuttoL@rumble.dev
-[DEBUG] --> :0xDEADBEEF 002 SuttoL SuttoL :Your host is 0xDEADBEEF, running version 0.1
-[DEBUG] --> :0xDEADBEEF 003 SuttoL SuttoL :This server was created Tue Nov 04 21:01:35 +0900 2008
-[DEBUG] --> :0xDEADBEEF 004 SuttoL SuttoL :0xDEADBEEF 0.1 aAbBcCdDeEfFGhHiIjkKlLmMnNopPQrRsStUvVwWxXyYzZ0123459*@ bcdefFhiIklmnoPqstv
-[DEBUG] --> :0xDEADBEEF 375 SuttoL  :MOTD
-[DEBUG] --> :0xDEADBEEF 372 SuttoL  :Welcome to Kookaburra 0.1
-[DEBUG] --> :0xDEADBEEF 372 SuttoL  :
-[DEBUG] --> :0xDEADBEEF 372 SuttoL  :		     )/_
-[DEBUG] --> :0xDEADBEEF 372 SuttoL  :		    <' \
-[DEBUG] --> :0xDEADBEEF 372 SuttoL  :		    /)  )
-[DEBUG] --> :0xDEADBEEF 372 SuttoL  :		---/'-""---
-[DEBUG] --> :0xDEADBEEF 372 SuttoL  :
-[DEBUG] --> :0xDEADBEEF 372 SuttoL  :Cockatoo is build on ruby-ircd
-[DEBUG] --> :0xDEADBEEF 372 SuttoL  :w/ a few customization
-[DEBUG] --> :0xDEADBEEF 372 SuttoL  :
-[DEBUG] --> :0xDEADBEEF 372 SuttoL  :ascii art from the intarwebs!
-[DEBUG] --> :0xDEADBEEF 376 SuttoL  :End of /MOTD command.
-[DEBUG] --> :SuttoL!~SuttoL@rumble.dev JOIN :#all
-[DEBUG] Handled
-[DEBUG] Line processed in 0.00223398208618164 seconds
-[DEBUG] Recieved line: USER jesus 8 * :Darcy Laycock
-[DEBUG] <-- USER jesus 8 * :Darcy Laycock
-[DEBUG] Processing line
-[DEBUG] --> :0xDEADBEEF 001 jesus jesus :Welcome to Cockatoo - jesus!jesus@rumble.dev
-[DEBUG] --> :0xDEADBEEF 002 jesus jesus :Your host is 0xDEADBEEF, running version 0.1
-[DEBUG] --> :0xDEADBEEF 003 jesus jesus :This server was created Tue Nov 04 21:01:35 +0900 2008
-[DEBUG] --> :0xDEADBEEF 004 jesus jesus :0xDEADBEEF 0.1 aAbBcCdDeEfFGhHiIjkKlLmMnNopPQrRsStUvVwWxXyYzZ0123459*@ bcdefFhiIklmnoPqstv
-[DEBUG] --> :0xDEADBEEF 375 jesus  :MOTD
-[DEBUG] --> :0xDEADBEEF 372 jesus  :Welcome to Kookaburra 0.1
-[DEBUG] --> :0xDEADBEEF 372 jesus  :
-[DEBUG] --> :0xDEADBEEF 372 jesus  :		     )/_
-[DEBUG] --> :0xDEADBEEF 372 jesus  :		    <' \
-[DEBUG] --> :0xDEADBEEF 372 jesus  :		    /)  )
-[DEBUG] --> :0xDEADBEEF 372 jesus  :		---/'-""---
-[DEBUG] --> :0xDEADBEEF 372 jesus  :
-[DEBUG] --> :0xDEADBEEF 372 jesus  :Cockatoo is build on ruby-ircd
-[DEBUG] --> :0xDEADBEEF 372 jesus  :w/ a few customization
-[DEBUG] --> :0xDEADBEEF 372 jesus  :
-[DEBUG] --> :0xDEADBEEF 372 jesus  :ascii art from the intarwebs!
-[DEBUG] --> :0xDEADBEEF 376 jesus  :End of /MOTD command.
-[DEBUG] --> :jesus!~jesus@rumble.dev JOIN :#all
-[DEBUG] Handled
-[DEBUG] Line processed in 0.00167489051818848 seconds
-[DEBUG] Recieved line: JOIN #wootsicles,#eotw,#all,#general 
-[DEBUG] <-- JOIN #wootsicles,#eotw,#all,#general 
-[DEBUG] Processing line
-[DEBUG] create channel: #wootsicles
-[DEBUG] --> :SuttoL!~SuttoL@rumble.dev JOIN :#wootsicles
-[DEBUG] --> :0xDEADBEEF 332 SuttoL #wootsicles :There is no topic
-[DEBUG] --> :0xDEADBEEF 353 SuttoL = #wootsicles :@SuttoL
-[DEBUG] --> :0xDEADBEEF 366 SuttoL #wootsicles  :End of /NAMES list.
-[DEBUG] create channel: #eotw
-[DEBUG] --> :SuttoL!~SuttoL@rumble.dev JOIN :#eotw
-[DEBUG] --> :0xDEADBEEF 332 SuttoL #eotw :There is no topic
-[DEBUG] --> :0xDEADBEEF 353 SuttoL = #eotw :@SuttoL
-[DEBUG] --> :0xDEADBEEF 366 SuttoL #eotw  :End of /NAMES list.
-[DEBUG] --> :0xDEADBEEF 332 SuttoL #all :All that is posted on Kookaburra
-[DEBUG] --> :0xDEADBEEF 353 SuttoL = #all : SuttoL  jesus
-[DEBUG] --> :0xDEADBEEF 366 SuttoL #all  :End of /NAMES list.
-[DEBUG] create channel: #general
-[DEBUG] --> :SuttoL!~SuttoL@rumble.dev JOIN :#general
-[DEBUG] --> :0xDEADBEEF 332 SuttoL #general :There is no topic
-[DEBUG] --> :0xDEADBEEF 353 SuttoL = #general :@SuttoL
-[DEBUG] --> :0xDEADBEEF 366 SuttoL #general  :End of /NAMES list.
-[DEBUG] Handled
-[DEBUG] Line processed in 0.00291204452514648 seconds
-[DEBUG] Recieved line: JOIN #eotw,#all 
-[DEBUG] <-- JOIN #eotw,#all 
-[DEBUG] Processing line
-[DEBUG] --> :jesus!~jesus@rumble.dev JOIN :#eotw
-[DEBUG] --> :jesus!~jesus@rumble.dev JOIN :#eotw
-[DEBUG] --> :0xDEADBEEF 332 jesus #eotw :There is no topic
-[DEBUG] --> :0xDEADBEEF 353 jesus = #eotw :@SuttoL jesus
-[DEBUG] --> :0xDEADBEEF 366 jesus #eotw  :End of /NAMES list.
-[DEBUG] --> :0xDEADBEEF 332 jesus #all :All that is posted on Kookaburra
-[DEBUG] --> :0xDEADBEEF 353 jesus = #all : SuttoL  jesus
-[DEBUG] --> :0xDEADBEEF 366 jesus #all  :End of /NAMES list.
-[DEBUG] Handled
-[DEBUG] Line processed in 0.00154495239257812 seconds
-[DEBUG] Recieved line: MODE #wootsicles +sn
-[DEBUG] <-- MODE #wootsicles +sn
-[DEBUG] Processing line
-[DEBUG] --> :SuttoL!~SuttoL@rumble.dev MODE #wootsicles :+sn
-[DEBUG] Handled
-[DEBUG] Line processed in 0.000558853149414062 seconds
-[DEBUG] Recieved line: MODE #eotw
-[DEBUG] <-- MODE #eotw
-[DEBUG] Processing line
-[DEBUG] --> :jesus!~jesus@rumble.dev MODE #eotw :
-[DEBUG] Handled
-[DEBUG] Line processed in 0.000540971755981445 seconds
-[DEBUG] Recieved line: MODE #all
-[DEBUG] <-- MODE #all
-[DEBUG] Processing line
-[DEBUG] --> :jesus!~jesus@rumble.dev MODE #all :
-[DEBUG] Handled
-[DEBUG] Line processed in 0.0031120777130127 seconds
-[DEBUG] Recieved line: WHO #eotw
-[DEBUG] <-- WHO #eotw
-[DEBUG] Processing line
-[DEBUG] --> :0xDEADBEEF 352 jesus #eotw :SuttoL!~SuttoL@rumble.dev rumble.dev 0xDEADBEEF SuttoL H :0 Darcy Laycock
-[DEBUG] --> :0xDEADBEEF 352 jesus #eotw :jesus!~jesus@rumble.dev rumble.dev 0xDEADBEEF jesus H :0 Darcy Laycock
-[DEBUG] --> :0xDEADBEEF 315 jesus #eotw :End of /WHO list.
-[DEBUG] Handled
-[DEBUG] Line processed in 0.00125408172607422 seconds
-[DEBUG] Recieved line: MODE #eotw +sn
-[DEBUG] <-- MODE #eotw +sn
-[DEBUG] Processing line
-[DEBUG] --> :SuttoL!~SuttoL@rumble.dev MODE #eotw :+sn
-[DEBUG] Handled
-[DEBUG] Line processed in 0.000352144241333008 seconds
-[DEBUG] Recieved line: MODE #all
-[DEBUG] <-- MODE #all
-[DEBUG] Processing line
-[DEBUG] --> :SuttoL!~SuttoL@rumble.dev MODE #all :
-[DEBUG] Handled
-[DEBUG] Line processed in 0.000772953033447266 seconds
-[DEBUG] Recieved line: WHO #all
-[DEBUG] <-- WHO #all
-[DEBUG] Processing line
-[DEBUG] --> :0xDEADBEEF 352 jesus #all :SuttoL!~SuttoL@rumble.dev rumble.dev 0xDEADBEEF SuttoL H :0 Darcy Laycock
-[DEBUG] --> :0xDEADBEEF 352 jesus #all :jesus!~jesus@rumble.dev rumble.dev 0xDEADBEEF jesus H :0 Darcy Laycock
-[DEBUG] --> :0xDEADBEEF 315 jesus #all :End of /WHO list.
-[DEBUG] Handled
-[DEBUG] Line processed in 0.00217700004577637 seconds
-[DEBUG] Recieved line: MODE #general +sn
-[DEBUG] <-- MODE #general +sn
-[DEBUG] Processing line
-[DEBUG] --> :SuttoL!~SuttoL@rumble.dev MODE #general :+sn
-[DEBUG] Handled
-[DEBUG] Line processed in 0.00123405456542969 seconds
-[DEBUG] Dumping Data
+[INFO]  Starting Kookaburra
+[INFO]  Initializing connection from 'rumble.dev'
+[DEBUG] >>> NOTICE AUTH :Kookaburra v0.1 initialized, welcome.
+[DEBUG] <<< NICK webjam 
+[INFO]  Attemping to set nick to webjam
+[DEBUG] <<< USER WebjamBot 0 * :WebjamBot 
+[DEBUG] >>> :0xDEADBEEF 001 webjam webjam :Welcome to Cockatoo - webjam!WebjamBot@rumble.dev
+[DEBUG] >>> :0xDEADBEEF 002 webjam webjam :Your host is 0xDEADBEEF, running version 0.1
+[DEBUG] >>> :0xDEADBEEF 003 webjam webjam :This server was created Tue Nov 04 23:26:26 +0900 2008
+[DEBUG] >>> :0xDEADBEEF 004 webjam webjam :0xDEADBEEF 0.1 aAbBcCdDeEfFGhHiIjkKlLmMnNopPQrRsStUvVwWxXyYzZ0123459*@ bcdefFhiIklmnoPqstv
+[DEBUG] >>> :0xDEADBEEF 375 webjam  :MOTD
+[DEBUG] >>> :0xDEADBEEF 372 webjam  :Oh hai there.
+[DEBUG] >>> :0xDEADBEEF 372 webjam  :
+[DEBUG] >>> :0xDEADBEEF 372 webjam  :Welcome to Kookaburra - the Ruby
+[DEBUG] >>> :0xDEADBEEF 372 webjam  :IRC daemon with drb access.
+[DEBUG] >>> :0xDEADBEEF 372 webjam  :
+[DEBUG] >>> :0xDEADBEEF 372 webjam  :Kookaburra is built on top of
+[DEBUG] >>> :0xDEADBEEF 372 webjam  :ruby-ircd.
+[DEBUG] >>> :0xDEADBEEF 376 webjam  :End of /MOTD command.
+[DEBUG] >>> :webjam!~WebjamBot@rumble.dev JOIN :#all
+[DEBUG] <<< JOIN #general 
+[INFO]  Creating channel #general
+[DEBUG] >>> :webjam!~WebjamBot@rumble.dev JOIN :#general
+[DEBUG] >>> :0xDEADBEEF 332 webjam #general :There is no topic
+[DEBUG] >>> :0xDEADBEEF 353 webjam = #general :@webjam
+[DEBUG] >>> :0xDEADBEEF 366 webjam #general  :End of /NAMES list.
+[DEBUG] <<< JOIN #webjam 
+[INFO]  Creating channel #webjam
+[DEBUG] >>> :webjam!~WebjamBot@rumble.dev JOIN :#webjam
+[DEBUG] >>> :0xDEADBEEF 332 webjam #webjam :There is no topic
+[DEBUG] >>> :0xDEADBEEF 353 webjam = #webjam :@webjam
+[DEBUG] >>> :0xDEADBEEF 366 webjam #webjam  :End of /NAMES list.
+[DEBUG] <<< JOIN #general 
+[INFO]  User already joined #general
+[INFO]  Initializing connection from 'rumble.dev'
+[DEBUG] >>> NOTICE AUTH :Kookaburra v0.1 initialized, welcome.
+[DEBUG] <<< NICK SuttoL
+[INFO]  Attemping to set nick to SuttoL
+[INFO]  Initializing connection from 'rumble.dev'
+[DEBUG] >>> NOTICE AUTH :Kookaburra v0.1 initialized, welcome.
+[DEBUG] <<< NICK jesus
+[INFO]  Attemping to set nick to jesus
+[DEBUG] <<< USER SuttoL 8 * :Darcy Laycock
+[DEBUG] >>> :0xDEADBEEF 001 SuttoL SuttoL :Welcome to Cockatoo - SuttoL!SuttoL@rumble.dev
+[DEBUG] >>> :0xDEADBEEF 002 SuttoL SuttoL :Your host is 0xDEADBEEF, running version 0.1
+[DEBUG] >>> :0xDEADBEEF 003 SuttoL SuttoL :This server was created Tue Nov 04 23:26:26 +0900 2008
+[DEBUG] >>> :0xDEADBEEF 004 SuttoL SuttoL :0xDEADBEEF 0.1 aAbBcCdDeEfFGhHiIjkKlLmMnNopPQrRsStUvVwWxXyYzZ0123459*@ bcdefFhiIklmnoPqstv
+[DEBUG] >>> :0xDEADBEEF 375 SuttoL  :MOTD
+[DEBUG] >>> :0xDEADBEEF 372 SuttoL  :Oh hai there.
+[DEBUG] >>> :0xDEADBEEF 372 SuttoL  :
+[DEBUG] >>> :0xDEADBEEF 372 SuttoL  :Welcome to Kookaburra - the Ruby
+[DEBUG] >>> :0xDEADBEEF 372 SuttoL  :IRC daemon with drb access.
+[DEBUG] >>> :0xDEADBEEF 372 SuttoL  :
+[DEBUG] >>> :0xDEADBEEF 372 SuttoL  :Kookaburra is built on top of
+[DEBUG] >>> :0xDEADBEEF 372 SuttoL  :ruby-ircd.
+[DEBUG] >>> :0xDEADBEEF 376 SuttoL  :End of /MOTD command.
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev JOIN :#all
+[DEBUG] <<< JOIN #all,#general,#webjam 
+[DEBUG] >>> :0xDEADBEEF 332 SuttoL #all :All that is posted on Kookaburra
+[DEBUG] >>> :0xDEADBEEF 353 SuttoL = #all : SuttoL  webjam  jesus
+[DEBUG] >>> :0xDEADBEEF 366 SuttoL #all  :End of /NAMES list.
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev JOIN :#general
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev JOIN :#general
+[DEBUG] >>> :0xDEADBEEF 332 SuttoL #general :There is no topic
+[DEBUG] >>> :0xDEADBEEF 353 SuttoL = #general :SuttoL @webjam
+[DEBUG] >>> :0xDEADBEEF 366 SuttoL #general  :End of /NAMES list.
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev JOIN :#webjam
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev JOIN :#webjam
+[DEBUG] >>> :0xDEADBEEF 332 SuttoL #webjam :There is no topic
+[DEBUG] >>> :0xDEADBEEF 353 SuttoL = #webjam :SuttoL @webjam
+[DEBUG] >>> :0xDEADBEEF 366 SuttoL #webjam  :End of /NAMES list.
+[DEBUG] <<< USER jesus 8 * :Darcy Laycock
+[DEBUG] >>> :0xDEADBEEF 001 jesus jesus :Welcome to Cockatoo - jesus!jesus@rumble.dev
+[DEBUG] >>> :0xDEADBEEF 002 jesus jesus :Your host is 0xDEADBEEF, running version 0.1
+[DEBUG] >>> :0xDEADBEEF 003 jesus jesus :This server was created Tue Nov 04 23:26:26 +0900 2008
+[DEBUG] >>> :0xDEADBEEF 004 jesus jesus :0xDEADBEEF 0.1 aAbBcCdDeEfFGhHiIjkKlLmMnNopPQrRsStUvVwWxXyYzZ0123459*@ bcdefFhiIklmnoPqstv
+[DEBUG] >>> :0xDEADBEEF 375 jesus  :MOTD
+[DEBUG] >>> :0xDEADBEEF 372 jesus  :Oh hai there.
+[DEBUG] >>> :0xDEADBEEF 372 jesus  :
+[DEBUG] >>> :0xDEADBEEF 372 jesus  :Welcome to Kookaburra - the Ruby
+[DEBUG] >>> :0xDEADBEEF 372 jesus  :IRC daemon with drb access.
+[DEBUG] >>> :0xDEADBEEF 372 jesus  :
+[DEBUG] >>> :0xDEADBEEF 372 jesus  :Kookaburra is built on top of
+[DEBUG] >>> :0xDEADBEEF 372 jesus  :ruby-ircd.
+[DEBUG] >>> :0xDEADBEEF 376 jesus  :End of /MOTD command.
+[DEBUG] >>> :jesus!~jesus@rumble.dev JOIN :#all
+[DEBUG] <<< MODE #all
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev MODE #all :
+[DEBUG] <<< JOIN #eotw,#all 
+[INFO]  Creating channel #eotw
+[DEBUG] >>> :jesus!~jesus@rumble.dev JOIN :#eotw
+[DEBUG] >>> :0xDEADBEEF 332 jesus #eotw :There is no topic
+[DEBUG] >>> :0xDEADBEEF 353 jesus = #eotw :@jesus
+[DEBUG] >>> :0xDEADBEEF 366 jesus #eotw  :End of /NAMES list.
+[DEBUG] >>> :0xDEADBEEF 332 jesus #all :All that is posted on Kookaburra
+[DEBUG] >>> :0xDEADBEEF 353 jesus = #all : SuttoL  webjam  jesus
+[DEBUG] >>> :0xDEADBEEF 366 jesus #all  :End of /NAMES list.
+[DEBUG] <<< MODE #general
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev MODE #general :
+[DEBUG] <<< MODE #eotw +sn
+[DEBUG] >>> :jesus!~jesus@rumble.dev MODE #eotw :+sn
+[DEBUG] <<< MODE #webjam
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev MODE #webjam :
+[DEBUG] <<< PRIVMSG #webjam :oh hai
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev PRIVMSG #webjam :oh hai
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev PRIVMSG #all :oh hai - from #webjam
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev PRIVMSG #all :oh hai - from #webjam
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev PRIVMSG #all :oh hai - from #webjam
+[DEBUG] <<< WHO #all
+[DEBUG] >>> :0xDEADBEEF 352 SuttoL #all :SuttoL!~SuttoL@rumble.dev rumble.dev 0xDEADBEEF SuttoL H :0 Darcy Laycock
+[DEBUG] >>> :0xDEADBEEF 352 SuttoL #all :webjam!~WebjamBot@rumble.dev rumble.dev 0xDEADBEEF webjam H :0 WebjamBot 
+[DEBUG] >>> :0xDEADBEEF 352 SuttoL #all :jesus!~jesus@rumble.dev rumble.dev 0xDEADBEEF jesus H :0 Darcy Laycock
+[DEBUG] >>> :0xDEADBEEF 315 SuttoL #all :End of /WHO list.
+[DEBUG] <<< MODE #all
+[DEBUG] >>> :jesus!~jesus@rumble.dev MODE #all :
+[DEBUG] <<< PRIVMSG #webjam :who should I vote for?
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev PRIVMSG #webjam :who should I vote for?
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev PRIVMSG #all :who should I vote for? - from #webjam
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev PRIVMSG #all :who should I vote for? - from #webjam
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev PRIVMSG #all :who should I vote for? - from #webjam
+[DEBUG] <<< PRIVMSG #webjam :SuttoL: I suggest voiting for Darcy Laycock - (Talk #10) 
+[DEBUG] >>> :webjam!~WebjamBot@rumble.dev PRIVMSG #webjam :SuttoL: I suggest voiting for Darcy Laycock - (Talk #10) 
+[DEBUG] >>> :webjam!~WebjamBot@rumble.dev PRIVMSG #all :SuttoL: I suggest voiting for Darcy Laycock - (Talk #10)  - from #webjam
+[DEBUG] >>> :webjam!~WebjamBot@rumble.dev PRIVMSG #all :SuttoL: I suggest voiting for Darcy Laycock - (Talk #10)  - from #webjam
+[DEBUG] >>> :webjam!~WebjamBot@rumble.dev PRIVMSG #all :SuttoL: I suggest voiting for Darcy Laycock - (Talk #10)  - from #webjam
+[DEBUG] <<< WHO #all
+[DEBUG] >>> :0xDEADBEEF 352 jesus #all :SuttoL!~SuttoL@rumble.dev rumble.dev 0xDEADBEEF SuttoL H :0 Darcy Laycock
+[DEBUG] >>> :0xDEADBEEF 352 jesus #all :webjam!~WebjamBot@rumble.dev rumble.dev 0xDEADBEEF webjam H :0 WebjamBot 
+[DEBUG] >>> :0xDEADBEEF 352 jesus #all :jesus!~jesus@rumble.dev rumble.dev 0xDEADBEEF jesus H :0 Darcy Laycock
+[DEBUG] >>> :0xDEADBEEF 315 jesus #all :End of /WHO list.
+[DEBUG] <<< PRIVMSG #webjam :how do I vote?
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev PRIVMSG #webjam :how do I vote?
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev PRIVMSG #all :how do I vote? - from #webjam
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev PRIVMSG #all :how do I vote? - from #webjam
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev PRIVMSG #all :how do I vote? - from #webjam
+[DEBUG] <<< PRIVMSG #webjam :SuttoL: You can vote for 10 by smsing our identifier - 10 - to the number they've given you 
+[DEBUG] >>> :webjam!~WebjamBot@rumble.dev PRIVMSG #webjam :SuttoL: You can vote for 10 by smsing our identifier - 10 - to the number they've given you 
+[DEBUG] >>> :webjam!~WebjamBot@rumble.dev PRIVMSG #all :SuttoL: You can vote for 10 by smsing our identifier - 10 - to the number they've given you  - from #webjam
+[DEBUG] >>> :webjam!~WebjamBot@rumble.dev PRIVMSG #all :SuttoL: You can vote for 10 by smsing our identifier - 10 - to the number they've given you  - from #webjam
+[DEBUG] >>> :webjam!~WebjamBot@rumble.dev PRIVMSG #all :SuttoL: You can vote for 10 by smsing our identifier - 10 - to the number they've given you  - from #webjam
+[DEBUG] <<< WHO #general
+[DEBUG] >>> :0xDEADBEEF 352 SuttoL #general :SuttoL!~SuttoL@rumble.dev rumble.dev 0xDEADBEEF SuttoL H :0 Darcy Laycock
+[DEBUG] >>> :0xDEADBEEF 352 SuttoL #general :webjam!~WebjamBot@rumble.dev rumble.dev 0xDEADBEEF webjam H :0 WebjamBot 
+[DEBUG] >>> :0xDEADBEEF 315 SuttoL #general :End of /WHO list.
+[DEBUG] >>> :DarcyLaycock!~unknown@cockatoo-server PRIVMSG #webjam :how do I vote?
+[DEBUG] >>> :DarcyLaycock!~unknown@cockatoo-server PRIVMSG #webjam :how do I vote?
+[DEBUG] >>> :DarcyLaycock!~unknown@cockatoo-server PRIVMSG #all :how do I vote? - from #webjam
+[DEBUG] >>> :DarcyLaycock!~unknown@cockatoo-server PRIVMSG #all :how do I vote? - from #webjam
+[DEBUG] >>> :DarcyLaycock!~unknown@cockatoo-server PRIVMSG #all :how do I vote? - from #webjam
+[DEBUG] <<< PRIVMSG #webjam :DarcyLaycock: You can vote for 10 by smsing our identifier - 10 - to the number they've given you 
+[DEBUG] >>> :webjam!~WebjamBot@rumble.dev PRIVMSG #webjam :DarcyLaycock: You can vote for 10 by smsing our identifier - 10 - to the number they've given you 
+[DEBUG] >>> :webjam!~WebjamBot@rumble.dev PRIVMSG #all :DarcyLaycock: You can vote for 10 by smsing our identifier - 10 - to the number they've given you  - from #webjam
+[DEBUG] >>> :webjam!~WebjamBot@rumble.dev PRIVMSG #all :DarcyLaycock: You can vote for 10 by smsing our identifier - 10 - to the number they've given you  - from #webjam
+[DEBUG] >>> :webjam!~WebjamBot@rumble.dev PRIVMSG #all :DarcyLaycock: You can vote for 10 by smsing our identifier - 10 - to the number they've given you  - from #webjam
+[DEBUG] <<< WHO #webjam
+[DEBUG] >>> :0xDEADBEEF 352 SuttoL #webjam :SuttoL!~SuttoL@rumble.dev rumble.dev 0xDEADBEEF SuttoL H :0 Darcy Laycock
+[DEBUG] >>> :0xDEADBEEF 352 SuttoL #webjam :webjam!~WebjamBot@rumble.dev rumble.dev 0xDEADBEEF webjam H :0 WebjamBot 
+[DEBUG] >>> :0xDEADBEEF 315 SuttoL #webjam :End of /WHO list.
+[DEBUG] >>> :DarcyLaycock!~unknown@cockatoo-server PRIVMSG #general :webjam: Who should I vote for?
+[DEBUG] >>> :DarcyLaycock!~unknown@cockatoo-server PRIVMSG #general :webjam: Who should I vote for?
+[DEBUG] >>> :DarcyLaycock!~unknown@cockatoo-server PRIVMSG #all :webjam: Who should I vote for? - from #general
+[DEBUG] >>> :DarcyLaycock!~unknown@cockatoo-server PRIVMSG #all :webjam: Who should I vote for? - from #general
+[DEBUG] >>> :DarcyLaycock!~unknown@cockatoo-server PRIVMSG #all :webjam: Who should I vote for? - from #general
+[DEBUG] <<< PRIVMSG #general :DarcyLaycock: I suggest voiting for Darcy Laycock - (Talk #10) 
+[DEBUG] >>> :webjam!~WebjamBot@rumble.dev PRIVMSG #general :DarcyLaycock: I suggest voiting for Darcy Laycock - (Talk #10) 
+[DEBUG] >>> :webjam!~WebjamBot@rumble.dev PRIVMSG #all :DarcyLaycock: I suggest voiting for Darcy Laycock - (Talk #10)  - from #general
+[DEBUG] >>> :webjam!~WebjamBot@rumble.dev PRIVMSG #all :DarcyLaycock: I suggest voiting for Darcy Laycock - (Talk #10)  - from #general
+[DEBUG] >>> :webjam!~WebjamBot@rumble.dev PRIVMSG #all :DarcyLaycock: I suggest voiting for Darcy Laycock - (Talk #10)  - from #general
+[DEBUG] <<< PRIVMSG #all :DarcyLaycock: I suggest voiting for Darcy Laycock - (Talk #10) 
+[DEBUG][INFO]  Starting Kookaburra
+[INFO]  Loading stored messages
+[INFO]  Initializing connection from 'rumble.dev'
+[DEBUG] >>> NOTICE AUTH :Kookaburra v0.1 initialized, welcome.
+[DEBUG] <<< NICK webjam 
+[INFO]  Attemping to set nick to webjam
+[DEBUG] <<< USER WebjamBot 0 * :WebjamBot 
+[DEBUG] >>> :0xDEADBEEF 001 webjam webjam :Welcome to Cockatoo - webjam!WebjamBot@rumble.dev
+[DEBUG] >>> :0xDEADBEEF 002 webjam webjam :Your host is 0xDEADBEEF, running version 0.1
+[DEBUG] >>> :0xDEADBEEF 003 webjam webjam :This server was created Tue Nov 04 23:34:22 +0900 2008
+[DEBUG] >>> :0xDEADBEEF 004 webjam webjam :0xDEADBEEF 0.1 aAbBcCdDeEfFGhHiIjkKlLmMnNopPQrRsStUvVwWxXyYzZ0123459*@ bcdefFhiIklmnoPqstv
+[DEBUG] >>> :0xDEADBEEF 375 webjam  :MOTD
+[DEBUG] >>> :0xDEADBEEF 372 webjam  :Oh hai there.
+[DEBUG] >>> :0xDEADBEEF 372 webjam  :
+[DEBUG] >>> :0xDEADBEEF 372 webjam  :Welcome to Kookaburra - the Ruby
+[DEBUG] >>> :0xDEADBEEF 372 webjam  :IRC daemon with drb access.
+[DEBUG] >>> :0xDEADBEEF 372 webjam  :
+[DEBUG] >>> :0xDEADBEEF 372 webjam  :Kookaburra is built on top of
+[DEBUG] >>> :0xDEADBEEF 372 webjam  :ruby-ircd.
+[DEBUG] >>> :0xDEADBEEF 376 webjam  :End of /MOTD command.
+[DEBUG] >>> :webjam!~WebjamBot@rumble.dev JOIN :#all
+[DEBUG] <<< JOIN #general 
+[INFO]  Creating channel #general
+[DEBUG] >>> :webjam!~WebjamBot@rumble.dev JOIN :#general
+[DEBUG] >>> :0xDEADBEEF 332 webjam #general :There is no topic
+[DEBUG] >>> :0xDEADBEEF 353 webjam = #general :@webjam
+[DEBUG] >>> :0xDEADBEEF 366 webjam #general  :End of /NAMES list.
+[DEBUG] <<< JOIN #webjam 
+[INFO]  Creating channel #webjam
+[DEBUG] >>> :webjam!~WebjamBot@rumble.dev JOIN :#webjam
+[DEBUG] >>> :0xDEADBEEF 332 webjam #webjam :There is no topic
+[DEBUG] >>> :0xDEADBEEF 353 webjam = #webjam :@webjam
+[DEBUG] >>> :0xDEADBEEF 366 webjam #webjam  :End of /NAMES list.
+[INFO]  Initializing connection from 'rumble.dev'
+[DEBUG] >>> NOTICE AUTH :Kookaburra v0.1 initialized, welcome.
+[INFO]  Initializing connection from 'rumble.dev'
+[DEBUG] >>> NOTICE AUTH :Kookaburra v0.1 initialized, welcome.
+[DEBUG] <<< NICK jesus
+[INFO]  Attemping to set nick to jesus
+[DEBUG] <<< NICK SuttoL
+[INFO]  Attemping to set nick to SuttoL
+[DEBUG] <<< USER jesus 8 * :Darcy Laycock
+[DEBUG] >>> :0xDEADBEEF 001 jesus jesus :Welcome to Cockatoo - jesus!jesus@rumble.dev
+[DEBUG] >>> :0xDEADBEEF 002 jesus jesus :Your host is 0xDEADBEEF, running version 0.1
+[DEBUG] >>> :0xDEADBEEF 003 jesus jesus :This server was created Tue Nov 04 23:34:22 +0900 2008
+[DEBUG] >>> :0xDEADBEEF 004 jesus jesus :0xDEADBEEF 0.1 aAbBcCdDeEfFGhHiIjkKlLmMnNopPQrRsStUvVwWxXyYzZ0123459*@ bcdefFhiIklmnoPqstv
+[DEBUG] >>> :0xDEADBEEF 375 jesus  :MOTD
+[DEBUG] >>> :0xDEADBEEF 372 jesus  :Oh hai there.
+[DEBUG] >>> :0xDEADBEEF 372 jesus  :
+[DEBUG] >>> :0xDEADBEEF 372 jesus  :Welcome to Kookaburra - the Ruby
+[DEBUG] >>> :0xDEADBEEF 372 jesus  :IRC daemon with drb access.
+[DEBUG] >>> :0xDEADBEEF 372 jesus  :
+[DEBUG] >>> :0xDEADBEEF 372 jesus  :Kookaburra is built on top of
+[DEBUG] >>> :0xDEADBEEF 372 jesus  :ruby-ircd.
+[DEBUG] >>> :0xDEADBEEF 376 jesus  :End of /MOTD command.
+[DEBUG] >>> :jesus!~jesus@rumble.dev JOIN :#all
+[DEBUG] <<< USER SuttoL 8 * :Darcy Laycock
+[DEBUG] >>> :0xDEADBEEF 001 SuttoL SuttoL :Welcome to Cockatoo - SuttoL!SuttoL@rumble.dev
+[DEBUG] >>> :0xDEADBEEF 002 SuttoL SuttoL :Your host is 0xDEADBEEF, running version 0.1
+[DEBUG] >>> :0xDEADBEEF 003 SuttoL SuttoL :This server was created Tue Nov 04 23:34:22 +0900 2008
+[DEBUG] >>> :0xDEADBEEF 004 SuttoL SuttoL :0xDEADBEEF 0.1 aAbBcCdDeEfFGhHiIjkKlLmMnNopPQrRsStUvVwWxXyYzZ0123459*@ bcdefFhiIklmnoPqstv
+[DEBUG] >>> :0xDEADBEEF 375 SuttoL  :MOTD
+[DEBUG] >>> :0xDEADBEEF 372 SuttoL  :Oh hai there.
+[DEBUG] >>> :0xDEADBEEF 372 SuttoL  :
+[DEBUG] >>> :0xDEADBEEF 372 SuttoL  :Welcome to Kookaburra - the Ruby
+[DEBUG] >>> :0xDEADBEEF 372 SuttoL  :IRC daemon with drb access.
+[DEBUG] >>> :0xDEADBEEF 372 SuttoL  :
+[DEBUG] >>> :0xDEADBEEF 372 SuttoL  :Kookaburra is built on top of
+[DEBUG] >>> :0xDEADBEEF 372 SuttoL  :ruby-ircd.
+[DEBUG] >>> :0xDEADBEEF 376 SuttoL  :End of /MOTD command.
+[DEBUG] >>> :SuttoL!~SuttoL@rum[INFO]  Starting Kookaburra
+[INFO]  Loading stored messages
+[INFO]  Initializing connection from 'rumble.dev'
+[DEBUG] >>> NOTICE AUTH :Kookaburra v0.1 initialized, welcome.
+[DEBUG] <<< NICK webjam 
+[INFO]  Attemping to set nick to webjam
+[DEBUG] <<< USER WebjamBot 0 * :WebjamBot 
+[DEBUG] >>> :0xDEADBEEF 001 webjam webjam :Welcome to Cockatoo - webjam!WebjamBot@rumble.dev
+[DEBUG] >>> :0xDEADBEEF 002 webjam webjam :Your host is 0xDEADBEEF, running version 0.1
+[DEBUG] >>> :0xDEADBEEF 003 webjam webjam :This server was created Tue Nov 04 23:35:55 +0900 2008
+[DEBUG] >>> :0xDEADBEEF 004 webjam webjam :0xDEADBEEF 0.1 aAbBcCdDeEfFGhHiIjkKlLmMnNopPQrRsStUvVwWxXyYzZ0123459*@ bcdefFhiIklmnoPqstv
+[DEBUG] >>> :0xDEADBEEF 375 webjam  :MOTD
+[DEBUG] >>> :0xDEADBEEF 372 webjam  :Oh hai there.
+[DEBUG] >>> :0xDEADBEEF 372 webjam  :
+[DEBUG] >>> :0xDEADBEEF 372 webjam  :Welcome to Kookaburra - the Ruby
+[DEBUG] >>> :0xDEADBEEF 372 webjam  :IRC daemon with drb access.
+[DEBUG] >>> :0xDEADBEEF 372 webjam  :
+[DEBUG] >>> :0xDEADBEEF 372 webjam  :Kookaburra is built on top of
+[DEBUG] >>> :0xDEADBEEF 372 webjam  :ruby-ircd.
+[DEBUG] >>> :0xDEADBEEF 376 webjam  :End of /MOTD command.
+[DEBUG] >>> :webjam!~WebjamBot@rumble.dev JOIN :#all
+[DEBUG] <<< JOIN #general 
+[INFO]  Creating channel #general
+[DEBUG] >>> :webjam!~WebjamBot@rumble.dev JOIN :#general
+[DEBUG] >>> :0xDEADBEEF 332 webjam #general :There is no topic
+[DEBUG] >>> :0xDEADBEEF 353 webjam = #general :@webjam
+[DEBUG] >>> :0xDEADBEEF 366 webjam #general  :End of /NAMES list.
+[DEBUG] <<< JOIN #webjam 
+[INFO]  Creating channel #webjam
+[DEBUG] >>> :webjam!~WebjamBot@rumble.dev JOIN :#webjam
+[DEBUG] >>> :0xDEADBEEF 332 webjam #webjam :There is no topic
+[DEBUG] >>> :0xDEADBEEF 353 webjam = #webjam :@webjam
+[DEBUG] >>> :0xDEADBEEF 366 webjam #webjam  :End of /NAMES list.
+[DEBUG] >>> :DarcyLaycock!~unknown@cockatoo-server PRIVMSG #general :hola
+[DEBUG] >>> :DarcyLaycock!~unknown@cockatoo-server PRIVMSG #all :hola - from #general
+[INFO]  Initializing connection from 'rumble.dev'
+[DEBUG] >>> NOTICE AUTH :Kookaburra v0.1 initialized, welcome.
+[INFO]  Initializing connection from 'rumble.dev'
+[DEBUG] >>> NOTICE AUTH :Kookaburra v0.1 initialized, welcome.
+[DEBUG] <<< NICK jesus
+[INFO]  Attemping to set nick to jesus
+[DEBUG] <<< NICK SuttoL
+[INFO]  Attemping to set nick to SuttoL
+[DEBUG] <<< USER jesus 8 * :Darcy Laycock
+[DEBUG] >>> :0xDEADBEEF 001 jesus jesus :Welcome to Cockatoo - jesus!jesus@rumble.dev
+[DEBUG] >>> :0xDEADBEEF 002 jesus jesus :Your host is 0xDEADBEEF, running version 0.1
+[DEBUG] >>> :0xDEADBEEF 003 jesus jesus :This server was created Tue Nov 04 23:35:55 +0900 2008
+[DEBUG] >>> :0xDEADBEEF 004 jesus jesus :0xDEADBEEF 0.1 aAbBcCdDeEfFGhHiIjkKlLmMnNopPQrRsStUvVwWxXyYzZ0123459*@ bcdefFhiIklmnoPqstv
+[DEBUG] >>> :0xDEADBEEF 375 jesus  :MOTD
+[DEBUG] >>> :0xDEADBEEF 372 jesus  :Oh hai there.
+[DEBUG] >>> :0xDEADBEEF 372 jesus  :
+[DEBUG] >>> :0xDEADBEEF 372 jesus  :Welcome to Kookaburra - the Ruby
+[DEBUG] >>> :0xDEADBEEF 372 jesus  :IRC daemon with drb access.
+[DEBUG] >>> :0xDEADBEEF 372 jesus  :
+[DEBUG] >>> :0xDEADBEEF 372 jesus  :Kookaburra is built on top of
+[DEBUG] >>> :0xDEADBEEF 372 jesus  :ruby-ircd.
+[DEBUG] >>> :0xDEADBEEF 376 jesus  :End of /MOTD command.
+[DEBUG] >>> :jesus!~jesus@rumble.dev JOIN :#all
+[DEBUG] <<< USER SuttoL 8 * :Darcy Laycock
+[DEBUG] >>> :0xDEADBEEF 001 SuttoL SuttoL :Welcome to Cockatoo - SuttoL!SuttoL@rumble.dev
+[DEBUG] >>> :0xDEADBEEF 002 SuttoL SuttoL :Your host is 0xDEADBEEF, running version 0.1
+[DEBUG] >>> :0xDEADBEEF 003 SuttoL SuttoL :This server was created Tue Nov 04 23:35:55 +0900 2008
+[DEBUG] >>> :0xDEADBEEF 004 SuttoL SuttoL :0xDEADBEEF 0.1 aAbBcCdDeEfFGhHiIjkKlLmMnNopPQrRsStUvVwWxXyYzZ0123459*@ bcdefFhiIklmnoPqstv
+[DEBUG] >>> :0xDEADBEEF 375 SuttoL  :MOTD
+[DEBUG] >>> :0xDEADBEEF 372 SuttoL  :Oh hai there.
+[DEBUG] >>> :0xDEADBEEF 372 SuttoL  :
+[DEBUG] >>> :0xDEADBEEF 372 SuttoL  :Welcome to Kookaburra - the Ruby
+[DEBUG] >>> :0xDEADBEEF 372 SuttoL  :IRC daemon with drb access.
+[DEBUG] >>> :0xDEADBEEF 372 SuttoL  :
+[DEBUG] >>> :0xDEADBEEF 372 SuttoL  :Kookaburra is built on top of
+[DEBUG] >>> :0xDEADBEEF 372 SuttoL  :ruby-ircd.
+[DEBUG] >>> :0xDEADBEEF 376 SuttoL  :End of /MOTD command.
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev JOIN :#all
+[DEBUG] <<< JOIN #eotw,#all 
+[INFO]  Creating channel #eotw
+[DEBUG] >>> :jesus!~jesus@rumble.dev JOIN :#eotw
+[DEBUG] >>> :0xDEADBEEF 332 jesus #eotw :There is no topic
+[DEBUG] >>> :0xDEADBEEF 353 jesus = #eotw :@jesus
+[DEBUG] >>> :0xDEADBEEF 366 jesus #eotw  :End of /NAMES list.
+[DEBUG] >>> :0xDEADBEEF 332 jesus #all :All that is posted on Kookaburra
+[DEBUG] >>> :0xDEADBEEF 353 jesus = #all : SuttoL  webjam  jesus
+[DEBUG] >>> :0xDEADBEEF 366 jesus #all  :End of /NAMES list.
+[DEBUG] <<< JOIN #all,#general,#webjam 
+[DEBUG] >>> :0xDEADBEEF 332 SuttoL #all :All that is posted on Kookaburra
+[DEBUG] >>> :0xDEADBEEF 353 SuttoL = #all : SuttoL  webjam  jesus
+[DEBUG] >>> :0xDEADBEEF 366 SuttoL #all  :End of /NAMES list.
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev JOIN :#general
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev JOIN :#general
+[DEBUG] >>> :0xDEADBEEF 332 SuttoL #general :There is no topic
+[DEBUG] >>> :0xDEADBEEF 353 SuttoL = #general :SuttoL @webjam
+[DEBUG] >>> :0xDEADBEEF 366 SuttoL #general  :End of /NAMES list.
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev JOIN :#webjam
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev JOIN :#webjam
+[DEBUG] >>> :0xDEADBEEF 332 SuttoL #webjam :There is no topic
+[DEBUG] >>> :0xDEADBEEF 353 SuttoL = #webjam :SuttoL @webjam
+[DEBUG] >>> :0xDEADBEEF 366 SuttoL #webjam  :End of /NAMES list.
+[DEBUG] <<< MODE #eotw +sn
+[DEBUG] >>> :jesus!~jesus@rumble.dev MODE #eotw :+sn
+[DEBUG] <<< MODE #all
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev MODE #all :
+[DEBUG] <<< MODE #general
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev MODE #general :
+[DEBUG] <<< MODE #webjam
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev MODE #webjam :
+[DEBUG] >>> :DarcyLaycock!~unknown@cockatoo-server PRIVMSG #general :webjam: who should I vote for?
+[DEBUG] >>> :DarcyLaycock!~unknown@cockatoo-server PRIVMSG #general :webjam: who should I vote for?
+[DEBUG] >>> :DarcyLaycock!~unknown@cockatoo-server PRIVMSG #all :webjam: who should I vote for? - from #general
+[DEBUG] >>> :DarcyLaycock!~unknown@cockatoo-server PRIVMSG #all :webjam: who should I vote for? - from #general
+[DEBUG] >>> :DarcyLaycock!~unknown@cockatoo-server PRIVMSG #all :webjam: who should I vote for? - from #general
+[DEBUG] <<< PRIVMSG #general :DarcyLaycock: I suggest voting for Darcy Laycock - (Talk #10) 
+[DEBUG] >>> :webjam!~WebjamBot@rumble.dev PRIVMSG #general :DarcyLaycock: I suggest voting for Darcy Laycock - (Talk #10) 
+[DEBUG] >>> :webjam!~WebjamBot@rumble.dev PRIVMSG #all :DarcyLaycock: I suggest voting for Darcy Laycock - (Talk #10)  - from #general
+[DEBUG] >>> :webjam!~WebjamBot@rumble.dev PRIVMSG #all :DarcyLaycock: I suggest voting for Darcy Laycock - (Talk #10)  - from #general
+[DEBUG] >>> :webjam!~WebjamBot@rumble.dev PRIVMSG #all :DarcyLaycock: I suggest voting for Darcy Laycock - (Talk #10)  - from #general
+[DEBUG] <<< PRIVMSG #all :DarcyLaycock: I suggest voting for Darcy Laycock - (Talk #10) 
+[DEBUG] <<< WHO #all
+[DEBUG] >>> :0xDEADBEEF 352 SuttoL #all :SuttoL!~SuttoL@rumble.dev rumble.dev 0xDEADBEEF SuttoL H :0 Darcy Laycock
+[DEBUG] >>> :0xDEADBEEF 352 SuttoL #all :webjam!~WebjamBot@rumble.dev rumble.dev 0xDEADBEEF webjam H :0 WebjamBot 
+[DEBUG] >>> :0xDEADBEEF 352 SuttoL #all :jesus!~jesus@rumble.dev rumble.dev 0xDEADBEEF jesus H :0 Darcy Laycock
+[DEBUG] >>> :0xDEADBEEF 315 SuttoL #all :End of /WHO list.
+[DEBUG] <<< MODE #all
+[DEBUG] >>> :jesus!~jesus@rumble.dev MODE #all :
+[DEBUG] <<< WHO #all
+[DEBUG] >>> :0xDEADBEEF 352 jesus #all :SuttoL!~SuttoL@rumble.dev rumble.dev 0xDEADBEEF SuttoL H :0 Darcy Laycock
+[DEBUG] >>> :0xDEADBEEF 352 jesus #all :webjam!~WebjamBot@rumble.dev rumble.dev 0xDEADBEEF webjam H :0 WebjamBot 
+[DEBUG] >>> :0xDEADBEEF 352 jesus #all :jesus!~jesus@rumble.dev rumble.dev 0xDEADBEEF jesus H :0 Darcy Laycock
+[DEBUG] >>> :0xDEADBEEF 315 jesus #all :End of /WHO list.
+[DEBUG] <<< WHO #general
+[DEBUG] >>> :0xDEADBEEF 352 SuttoL #general :SuttoL!~SuttoL@rumble.dev rumble.dev 0xDEADBEEF SuttoL H :0 Darcy Laycock
+[DEBUG] >>> :0xDEADBEEF 352 SuttoL #general :webjam!~WebjamBot@rumble.dev rumble.dev 0xDEADBEEF webjam H :0 WebjamBot 
+[DEBUG] >>> :0xDEADBEEF 315 SuttoL #general :End of /WHO list.
+[DEBUG] <<< WHO #webjam
+[DEBUG] >>> :0xDEADBEEF 352 SuttoL #webjam :SuttoL!~SuttoL@rumble.dev rumble.dev 0xDEADBEEF SuttoL H :0 Darcy Laycock
+[DEBUG] >>> :0xDEADBEEF 352 SuttoL #webjam :webjam!~WebjamBot@rumble.dev rumble.dev 0xDEADBEEF webjam H :0 WebjamBot 
+[DEBUG] >>> :0xDEADBEEF 315 SuttoL #webjam :End of /WHO list.
+[DEBUG] >>> :DarcyLaycock!~unknown@cockatoo-server PRIVMSG #webjam :How do I vote?
+[DEBUG] >>> :DarcyLaycock!~unknown@cockatoo-server PRIVMSG #webjam :How do I vote?
+[DEBUG] >>> :DarcyLaycock!~unknown@cockatoo-server PRIVMSG #all :How do I vote? - from #webjam
+[DEBUG] >>> :DarcyLaycock!~unknown@cockatoo-server PRIVMSG #all :How do I vote? - from #webjam
+[DEBUG] >>> :DarcyLaycock!~unknown@cockatoo-server PRIVMSG #all :How do I vote? - from #webjam
+[DEBUG] <<< PRIVMSG #webjam :DarcyLaycock: Follow the Webjam team's instructions w/ our identifier which is 10 
+[DEBUG] >>> :webjam!~WebjamBot@rumble.dev PRIVMSG #webjam :DarcyLaycock: Follow the Webjam team's instructions w/ our identifier which is 10 
+[DEBUG] >>> :webjam!~WebjamBot@rumble.dev PRIVMSG #all :DarcyLaycock: Follow the Webjam team's instructions w/ our identifier which is 10  - from #webjam
+[DEBUG] >>> :webjam!~WebjamBot@rumble.dev PRIVMSG #all :DarcyLaycock: Follow the Webjam team's instructions w/ our identifier which is 10  - from #webjam
+[DEBUG] >>> :webjam!~WebjamBot@rumble.dev PRIVMSG #all :DarcyLaycock: Follow the Webjam team's instructions w/ our identifier which is 10  - from #webjam
+[DEBUG] >>> PING :0xDEADBEEF
+[DEBUG] >>> PING :0xDEADBEEF
+[DEBUG] >>> PING :0xDEADBEEF
+[DEBUG] <<< PONG 0xDEADBEEF
+[INFO]  Got pong: 0xDEADBEEF
+[DEBUG] <<< PONG 0xDEADBEEF
+[INFO]  Got pong: 0xDEADBEEF
+[DEBUG] >>> PING :0xDEADBEEF
+[DEBUG] >>> PING :0xDEADBEEF
+[DEBUG] >>> PING :0xDEADBEEF
+[DEBUG] <<< PONG 0xDEADBEEF
+[INFO]  Got pong: 0xDEADBEEF
+[DEBUG] <<< PONG 0xDEADBEEF
+[INFO]  Got pong: 0xDEADBEEF
+[DEBUG] >>> PING :0xDEADBEEF
+[DEBUG] >>> PING :0xDEADBEEF
+[DEBUG] >>> PING :0xDEADBEEF
+[DEBUG] <<< PONG 0xDEADBEEF
+[INFO]  Got pong: 0xDEADBEEF
+[DEBUG] <<< PONG 0xDEADBEEF
+[INFO]  Got pong: 0xDEADBEEF
+[DEBUG] >>> PING :0xDEADBEEF
+[DEBUG] >>> PING :0xDEADBEEF
+[DEBUG] >>> PING :0xDEADBEEF
+[DEBUG] <<< PONG 0xDEADBEEF
+[INFO]  Got pong: 0xDEADBEEF
+[DEBUG] <<< PONG 0xDEADBEEF
+[INFO]  Got pong: 0xDEADBEEF
+[DEBUG] >>> PING :0xDEADBEEF
+[DEBUG] >>> PING :0xDEADBEEF
+[DEBUG] >>> PING :0xDEADBEEF
+[DEBUG] <<< PONG 0xDEADBEEF
+[INFO]  Got pong: 0xDEADBEEF
+[DEBUG] <<< PONG 0xDEADBEEF
+[INFO]  Got pong: 0xDEADBEEF
+[DEBUG] >>> PING :0xDEADBEEF
+[DEBUG] >>> PING :0xDEADBEEF
+[DEBUG] >>> PING :0xDEADBEEF
+[DEBUG] <<< PONG 0xDEADBEEF
+[INFO]  Got pong: 0xDEADBEEF
+[DEBUG] <<< PONG 0xDEADBEEF
+[INFO]  Got pong: 0xDEADBEEF
+[DEBUG] >>> PING :0xDEADBEEF
+[DEBUG] >>> PING :0xDEADBEEF
+[DEBUG] >>> PING :0xDEADBEEF
+[DEBUG] <<< PONG 0xDEADBEEF
+[INFO]  Got pong: 0xDEADBEEF
+[DEBUG] <<< PONG 0xDEADBEEF
+[INFO]  Got pong: 0xDEADBEEF
+[DEBUG] >>> PING :0xDEADBEEF
+[DEBUG] >>> PING :0xDEADBEEF
+[DEBUG] >>> PING :0xDEADBEEF
+[DEBUG] <<< PONG 0xDEADBEEF
+[INFO]  Got pong: 0xDEADBEEF
+[DEBUG] <<< PONG 0xDEADBEEF
+[INFO]  Got pong: 0xDEADBEEF
+[DEBUG] >>> PING :0xDEADBEEF
+[DEBUG] >>> PING :0xDEADBEEF
+[DEBUG] >>> PING :0xDEADBEEF
+[DEBUG] <<< PONG 0xDEADBEEF
+[INFO]  Got pong: 0xDEADBEEF
+[DEBUG] <<< PONG 0xDEADBEEF
+[INFO]  Got pong: 0xDEADBEEF
+[DEBUG] >>> PING :0xDEADBEEF
+[DEBUG] >>> PING :0xDEADBEEF
+[DEBUG] >>> PING :0xDEADBEEF
+[DEBUG] <<< PONG 0xDEADBEEF
+[INFO]  Got pong: 0xDEADBEEF
+[DEBUG] <<< PONG 0xDEADBEEF
+[INFO]  Got pong: 0xDEADBEEF
+[DEBUG] >>> :DarcyLaycock!~unknown@cockatoo-server PRIVMSG #eotw :Welcome to Webjam at #eotw, Perth
+[DEBUG] >>> :DarcyLaycock!~unknown@cockatoo-server PRIVMSG #all :Welcome to Webjam at #eotw, Perth - from #eotw
+[DEBUG] >>> :DarcyLaycock!~unknown@cockatoo-server PRIVMSG #all :Welcome to Webjam at #eotw, Perth - from #eotw
+[DEBUG] >>> :DarcyLaycock!~unknown@cockatoo-server PRIVMSG #all :Welcome to Webjam at #eotw, Perth - from #eotw
+[DEBUG] >>> :DarcyLaycock!~unknown@cockatoo-server PRIVMSG #general :DarcyLaycock: woot!
+[DEBUG] >>> :DarcyLaycock!~unknown@cockatoo-server PRIVMSG #general :DarcyLaycock: woot!
+[DEBUG] >>> :DarcyLaycock!~unknown@cockatoo-server PRIVMSG #all :DarcyLaycock: woot! - from #general
+[DEBUG] >>> :DarcyLaycock!~unknown@cockatoo-server PRIVMSG #all :DarcyLaycock: woot! - from #general
+[DEBUG] >>> :DarcyLaycock!~unknown@cockatoo-server PRIVMSG #all :DarcyLaycock: woot! - from #general
+[DEBUG] >>> :DarcyLaycock!~unknown@cockatoo-server PRIVMSG #general :SuttoL: Hola!
+[DEBUG] >>> :DarcyLaycock!~unknown@cockatoo-server PRIVMSG #general :SuttoL: Hola!
+[DEBUG] >>> :DarcyLaycock!~unknown@cockatoo-server PRIVMSG #all :SuttoL: Hola! - from #general
+[DEBUG] >>> :DarcyLaycock!~unknown@cockatoo-server PRIVMSG #all :SuttoL: Hola! - from #general
+[DEBUG] >>> :DarcyLaycock!~unknown@cockatoo-server PRIVMSG #all :SuttoL: Hola! - from #general
+[DEBUG] >>> PING :0xDEADBEEF
+[DEBUG] >>> PING :0xDEADBEEF
+[DEBUG] >>> PING :0xDEADBEEF
+[DEBUG] <<< PONG 0xDEADBEEF
+[INFO]  Got pong: 0xDEADBEEF
+[DEBUG] <<< PONG 0xDEADBEEF
+[INFO]  Got pong: 0xDEADBEEF
+[DEBUG] >>> PING :0xDEADBEEF
+[DEBUG] >>> PING :0xDEADBEEF
+[DEBUG] >>> PING :0xDEADBEEF
+[DEBUG] <<< PONG 0xDEADBEEF
+[INFO]  Got pong: 0xDEADBEEF
+[DEBUG] <<< PONG 0xDEADBEEF
+[INFO]  Got pong: 0xDEADBEEF
+[DEBUG] >>> :JoePlumber!~unknown@cockatoo-server PRIVMSG #general :hola!
+[DEBUG] >>> :JoePlumber!~unknown@cockatoo-server PRIVMSG #general :hola!
+[DEBUG] >>> :JoePlumber!~unknown@cockatoo-server PRIVMSG #all :hola! - from #general
+[DEBUG] >>> :JoePlumber!~unknown@cockatoo-server PRIVMSG #all :hola! - from #general
+[DEBUG] >>> :JoePlumber!~unknown@cockatoo-server PRIVMSG #all :hola! - from #general
+[DEBUG] >>> PING :0xDEADBEEF
+[DEBUG] >>> PING :0xDEADBEEF
+[DEBUG] >>> PING :0xDEADBEEF
+[DEBUG] <<< PONG 0xDEADBEEF
+[INFO]  Got pong: 0xDEADBEEF
+[DEBUG] <<< PONG 0xDEADBEEF
+[INFO]  Got pong: 0xDEADBEEF
+[DEBUG] >>> :Sutto!~unknown@cockatoo-server PRIVMSG #general :lolz
+[DEBUG] >>> :Sutto!~unknown@cockatoo-server PRIVMSG #general :lolz
+[DEBUG] >>> :Sutto!~unknown@cockatoo-server PRIVMSG #all :lolz - from #general
+[DEBUG] >>> :Sutto!~unknown@cockatoo-server PRIVMSG #all :lolz - from #general
+[DEBUG] >>> :Sutto!~unknown@cockatoo-server PRIVMSG #all :lolz - from #general
+[DEBUG] >>> :Sutto!~unknown@cockatoo-server PRIVMSG #general :lolz
+[DEBUG] >>> :Sutto!~unknown@cockatoo-server PRIVMSG #general :lolz
+[DEBUG] >>> :Sutto!~unknown@cockatoo-server PRIVMSG #all :lolz - from #general
+[DEBUG] >>> :Sutto!~unknown@cockatoo-server PRIVMSG #all :lolz - from #general
+[DEBUG] >>> :Sutto!~unknown@cockatoo-server PRIVMSG #all :lolz - from #general
+[DEBUG] >>> :Sutto!~unknown@cockatoo-server PRIVMSG #general :lolz
+[DEBUG] >>> :Sutto!~unknown@cockatoo-server PRIVMSG #general :lolz
+[DEBUG] >>> :Sutto!~unknown@cockatoo-server PRIVMSG #all :lolz - from #general
+[DEBUG] >>> :Sutto!~unknown@cockatoo-server PRIVMSG #all :lolz - from #general
+[DEBUG] >>> :Sutto!~unknown@cockatoo-server PRIVMSG #all :lolz - from #general
+[DEBUG] >>> PING :0xDEADBEEF
+[DEBUG] >>> PING :0xDEADBEEF
+[DEBUG] >>> PING :0xDEADBEEF
+[DEBUG] <<< PONG 0xDEADBEEF
+[INFO]  Got pong: 0xDEADBEEF
+[DEBUG] <<< PONG 0xDEADBEEF
+[INFO]  Got pong: 0xDEADBEEF
+[DEBUG] >>> :JoePlumber!~unknown@cockatoo-server PRIVMSG #general :fsfsdfs
+[DEBUG] >>> :JoePlumber!~unknown@cockatoo-server PRIVMSG #general :fsfsdfs
+[DEBUG] >>> :JoePlumber!~unknown@cockatoo-server PRIVMSG #all :fsfsdfs - from #general
+[DEBUG] >>> :JoePlumber!~unknown@cockatoo-server PRIVMSG #all :fsfsdfs - from #general
+[DEBUG] >>> :JoePlumber!~unknown@cockatoo-server PRIVMSG #all :fsfsdfs - from #general
+[DEBUG] >>> :Sutto!~unknown@cockatoo-server PRIVMSG #general :lolz
+[DEBUG] >>> :Sutto!~unknown@cockatoo-server PRIVMSG #general :lolz
+[DEBUG] >>> :Sutto!~unknown@cockatoo-server PRIVMSG #all :lolz - from #general
+[DEBUG] >>> :Sutto!~unknown@cockatoo-server PRIVMSG #all :lolz - from #general
+[DEBUG] >>> :Sutto!~unknown@cockatoo-server PRIVMSG #all :lolz - from #general
+[DEBUG] >>> PING :0xDEADBEEF
+[DE[INFO]  Starting Kookaburra
+[INFO]  Loading stored messages
+[INFO]  Initializing connection from 'rumble.dev'
+[DEBUG] >>> NOTICE AUTH :Kookaburra v0.1 initialized, welcome.
+[INFO]  Initializing connection from 'rumble.dev'
+[DEBUG] >>> NOTICE AUTH :Kookaburra v0.1 initialized, welcome.
+[DEBUG] <<< NICK jesus
+[INFO]  Attemping to set nick to jesus
+[DEBUG] <<< NICK SuttoL
+[INFO]  Attemping to set nick to SuttoL
+[DEBUG] <<< USER jesus 8 * :Darcy Laycock
+[DEBUG] >>> :0xDEADBEEF 001 jesus jesus :Welcome to Cockatoo - jesus!jesus@rumble.dev
+[DEBUG] >>> :0xDEADBEEF 002 jesus jesus :Your host is 0xDEADBEEF, running version 0.1
+[DEBUG] >>> :0xDEADBEEF 003 jesus jesus :This server was created Wed Nov 05 00:54:58 +0900 2008
+[DEBUG] >>> :0xDEADBEEF 004 jesus jesus :0xDEADBEEF 0.1 aAbBcCdDeEfFGhHiIjkKlLmMnNopPQrRsStUvVwWxXyYzZ0123459*@ bcdefFhiIklmnoPqstv
+[DEBUG] >>> :0xDEADBEEF 375 jesus  :MOTD
+[DEBUG] >>> :0xDEADBEEF 372 jesus  :Oh hai there.
+[DEBUG] >>> :0xDEADBEEF 372 jesus  :
+[DEBUG] >>> :0xDEADBEEF 372 jesus  :Welcome to Kookaburra - the Ruby
+[DEBUG] >>> :0xDEADBEEF 372 jesus  :IRC daemon with drb access.
+[DEBUG] >>> :0xDEADBEEF 372 jesus  :
+[DEBUG] >>> :0xDEADBEEF 372 jesus  :Kookaburra is built on top of
+[DEBUG] >>> :0xDEADBEEF 372 jesus  :ruby-ircd.
+[DEBUG] >>> :0xDEADBEEF 376 jesus  :End of /MOTD command.
+[DEBUG] >>> :jesus!~jesus@rumble.dev JOIN :#all
+[DEBUG] <<< USER SuttoL 8 * :Darcy Laycock
+[DEBUG] >>> :0xDEADBEEF 001 SuttoL SuttoL :Welcome to Cockatoo - SuttoL!SuttoL@rumble.dev
+[DEBUG] >>> :0xDEADBEEF 002 SuttoL SuttoL :Your host is 0xDEADBEEF, running version 0.1
+[DEBUG] >>> :0xDEADBEEF 003 SuttoL SuttoL :This server was created Wed Nov 05 00:54:58 +0900 2008
+[DEBUG] >>> :0xDEADBEEF 004 SuttoL SuttoL :0xDEADBEEF 0.1 aAbBcCdDeEfFGhHiIjkKlLmMnNopPQrRsStUvVwWxXyYzZ0123459*@ bcdefFhiIklmnoPqstv
+[DEBUG] >>> :0xDEADBEEF 375 SuttoL  :MOTD
+[DEBUG] >>> :0xDEADBEEF 372 SuttoL  :Oh hai there.
+[DEBUG] >>> :0xDEADBEEF 372 SuttoL  :
+[DEBUG] >>> :0xDEADBEEF 372 SuttoL  :Welcome to Kookaburra - the Ruby
+[DEBUG] >>> :0xDEADBEEF 372 SuttoL  :IRC daemon with drb access.
+[DEBUG] >>> :0xDEADBEEF 372 SuttoL  :
+[DEBUG] >>> :0xDEADBEEF 372 SuttoL  :Kookaburra is built on top of
+[DEBUG] >>> :0xDEADBEEF 372 SuttoL  :ruby-ircd.
+[DEBUG] >>> :0xDEADBEEF 376 SuttoL  :End of /MOTD command.
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev JOIN :#all
+[DEBUG] <<< JOIN #eotw,#all 
+[INFO]  Creating channel #eotw
+[DEBUG] >>> :jesus!~jesus@rumble.dev JOIN :#eotw
+[DEBUG] >>> :0xDEADBEEF 332 jesus #eotw :There is no topic
+[DEBUG] >>> :0xDEADBEEF 353 jesus = #eotw :@jesus
+[DEBUG] >>> :0xDEADBEEF 366 jesus #eotw  :End of /NAMES list.
+[DEBUG] >>> :0xDEADBEEF 332 jesus #all :All that is posted on Kookaburra
+[DEBUG] >>> :0xDEADBEEF 353 jesus = #all : SuttoL  jesus
+[DEBUG] >>> :0xDEADBEEF 366 jesus #all  :End of /NAMES list.
+[DEBUG] <<< JOIN #all,#general,#webjam 
+[DEBUG] >>> :0xDEADBEEF 332 SuttoL #all :All that is posted on Kookaburra
+[DEBUG] >>> :0xDEADBEEF 353 SuttoL = #all : SuttoL  jesus
+[DEBUG] >>> :0xDEADBEEF 366 SuttoL #all  :End of /NAMES list.
+[INFO]  Creating channel #general
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev JOIN :#general
+[DEBUG] >>> :0xDEADBEEF 332 SuttoL #general :There is no topic
+[DEBUG] >>> :0xDEADBEEF 353 SuttoL = #general :@SuttoL
+[DEBUG] >>> :0xDEADBEEF 366 SuttoL #general  :End of /NAMES list.
+[INFO]  Creating channel #webjam
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev JOIN :#webjam
+[DEBUG] >>> :0xDEADBEEF 332 SuttoL #webjam :There is no topic
+[DEBUG] >>> :0xDEADBEEF 353 SuttoL = #webjam :@SuttoL
+[DEBUG] >>> :0xDEADBEEF 366 SuttoL #webjam  :End of /NAMES list.
+[DEBUG] <<< MODE #eotw +sn
+[DEBUG] >>> :jesus!~jesus@rumble.dev MODE #eotw :+sn
+[DEBUG] <<< MODE #all
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev MODE #all :
+[DEBUG] <<< MODE #general +sn
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev MODE #general :+sn
+[DEBUG] <<< MODE #all
+[DEBUG] >>> :jesus!~jesus@rumble.dev MODE #all :
+[DEBUG] <<< MODE #webjam +sn
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev MODE #webjam :+sn
+[DEBUG] <<< WHO #all
+[DEBUG] >>> :0xDEADBEEF 352 jesus #all :SuttoL!~SuttoL@rumble.dev rumble.dev 0xDE[INFO]  Starting Kookaburra
+[INFO]  Loading stored messages
+[INFO]  Initializing connection from 'rumble.dev'
+[DEBUG] >>> NOTICE AUTH :Kookaburra v0.1 initialized, welcome.
+[DEBUG] <<< NICK jesus
+[INFO]  Attemping to set nick to jesus
+[INFO]  Initializing connection from 'rumble.dev'
+[DEBUG] >>> NOTICE AUTH :Kookaburra v0.1 initialized, welcome.
+[DEBUG] <<< USER jesus 8 * :Darcy Laycock
+[DEBUG] >>> :0xDEADBEEF 001 jesus jesus :Welcome to Cockatoo - jesus!jesus@rumble.dev
+[DEBUG] >>> :0xDEADBEEF 002 jesus jesus :Your host is 0xDEADBEEF, running version 0.1
+[DEBUG] >>> :0xDEADBEEF 003 jesus jesus :This server was created Wed Nov 05 00:57:27 +0900 2008
+[DEBUG] >>> :0xDEADBEEF 004 jesus jesus :0xDEADBEEF 0.1 aAbBcCdDeEfFGhHiIjkKlLmMnNopPQrRsStUvVwWxXyYzZ0123459*@ bcdefFhiIklmnoPqstv
+[DEBUG] >>> :0xDEADBEEF 375 jesus  :MOTD
+[DEBUG] >>> :0xDEADBEEF 372 jesus  :Oh hai there.
+[DEBUG] >>> :0xDEADBEEF 372 jesus  :
+[DEBUG] >>> :0xDEADBEEF 372 jesus  :Welcome to Kookaburra - the Ruby
+[DEBUG] >>> :0xDEADBEEF 372 jesus  :IRC daemon with drb access.
+[DEBUG] >>> :0xDEADBEEF 372 jesus  :
+[DEBUG] >>> :0xDEADBEEF 372 jesus  :Kookaburra is built on top of
+[DEBUG] >>> :0xDEADBEEF 372 jesus  :ruby-ircd.
+[DEBUG] >>> :0xDEADBEEF 376 jesus  :End of /MOTD command.
+[DEBUG] >>> :jesus!~jesus@rumble.dev JOIN :#all
+[DEBUG] <<< NICK SuttoL
+[INFO]  Attemping to set nick to SuttoL
+[DEBUG] <<< JOIN #eotw,#all 
+[INFO]  Creating channel #eotw
+[DEBUG] >>> :jesus!~jesus@rumble.dev JOIN :#eotw
+[DEBUG] >>> :0xDEADBEEF 332 jesus #eotw :There is no topic
+[DEBUG] >>> :0xDEADBEEF 353 jesus = #eotw :@jesus
+[DEBUG] >>> :0xDEADBEEF 366 jesus #eotw  :End of /NAMES list.
+[DEBUG] >>> :0xDEADBEEF 332 jesus #all :All that is posted on Kookaburra
+[DEBUG] >>> :0xDEADBEEF 353 jesus = #all : SuttoL  jesus
+[DEBUG] >>> :0xDEADBEEF 366 jesus #all  :End of /NAMES list.
+[DEBUG] <<< USER SuttoL 8 * :Darcy Laycock
+[DEBUG] >>> :0xDEADBEEF 001 SuttoL SuttoL :Welcome to Cockatoo - SuttoL!SuttoL@rumble.dev
+[DEBUG] >>> :0xDEADBEEF 002 SuttoL SuttoL :Your host is 0xDEADBEEF, running version 0.1
+[DEBUG] >>> :0xDEADBEEF 003 SuttoL SuttoL :This server was created Wed Nov 05 00:57:27 +0900 2008
+[DEBUG] >>> :0xDEADBEEF 004 SuttoL SuttoL :0xDEADBEEF 0.1 aAbBcCdDeEfFGhHiIjkKlLmMnNopPQrRsStUvVwWxXyYzZ0123459*@ bcdefFhiIklmnoPqstv
+[DEBUG] >>> :0xDEADBEEF 375 SuttoL  :MOTD
+[DEBUG] >>> :0xDEADBEEF 372 SuttoL  :Oh hai there.
+[DEBUG] >>> :0xDEADBEEF 372 SuttoL  :
+[DEBUG] >>> :0xDEADBEEF 372 SuttoL  :Welcome to Kookaburra - the Ruby
+[DEBUG] >>> :0xDEADBEEF 372 SuttoL  :IRC daemon with drb access.
+[DEBUG] >>> :0xDEADBEEF 372 SuttoL  :
+[DEBUG] >>> :0xDEADBEEF 372 SuttoL  :Kookaburra is built on top of
+[DEBUG] >>> :0xDEADBEEF 372 SuttoL  :ruby-ircd.
+[DEBUG] >>> :0xDEADBEEF 376 SuttoL  :End of /MOTD command.
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev JOIN :#all
+[DEBUG] <<< MODE #eotw +sn
+[DEBUG] >>> :jesus!~jesus@rumble.dev MODE #eotw :+sn
+[DEBUG] <<< JOIN #all,#general,#webjam 
+[DEBUG] >>> :0xDEADBEEF 332 SuttoL #all :All that is posted on Kookaburra
+[DEBUG] >>> :0xDEADBEEF 353 SuttoL = #all : SuttoL  jesus
+[DEBUG] >>> :0xDEADBEEF 366 SuttoL #all  :End of /NAMES list.
+[INFO]  Creating channel #general
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev JOIN :#general
+[DEBUG] >>> :0xDEADBEEF 332 SuttoL #general :There is no topic
+[DEBUG] >>> :0xDEADBEEF 353 SuttoL = #general :@SuttoL
+[DEBUG] >>> :0xDEADBEEF 366 SuttoL #general  :End of /NAMES list.
+[INFO]  Creating channel #webjam
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev JOIN :#webjam
+[DEBUG] >>> :0xDEADBEEF 332 SuttoL #webjam :There is no topic
+[DEBUG] >>> :0xDEADBEEF 353 SuttoL = #webjam :@SuttoL
+[DEBUG] >>> :0xDEADBEEF 366 SuttoL #webjam  :End of /NAMES list.
+[DEBUG] <<< MODE #all
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev MODE #all :
+[DEBUG] <<< MODE #general +sn
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev MODE #general :+sn
+[DEBUG] <<< MODE #all
+[DEBUG] >>> :jesus!~jesus@rumble.dev MODE #all :
+[DEBUG] <<< MODE #webjam +sn
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev MODE #webjam :+sn
+[DEBUG] <<< WHO #all
+[DEBUG] >>> :0xDEADBEEF 352 jesus #all :SuttoL!~SuttoL@rumble.dev rumble.dev 0xDE[INFO]  Starting Kookaburra
+[INFO]  Loading stored messages
+[INFO]  Initializing connection from 'rumble.dev'
+[DEBUG] >>> NOTICE AUTH :Kookaburra v0.1 initialized, welcome.
+[INFO]  Initializing connection from 'rumble.dev'
+[DEBUG] >>> NOTICE AUTH :Kookaburra v0.1 initialized, welcome.
+[DEBUG] <<< NICK jesus
+[INFO]  Attemping to set nick to jesus
+[DEBUG] <<< NICK SuttoL
+[INFO]  Attemping to set nick to SuttoL
+[DEBUG] <<< USER jesus 8 * :Darcy Laycock
+[DEBUG] >>> :0xDEADBEEF 001 jesus jesus :Welcome to Cockatoo - jesus!jesus@rumble.dev
+[DEBUG] >>> :0xDEADBEEF 002 jesus jesus :Your host is 0xDEADBEEF, running version 0.1
+[DEBUG] >>> :0xDEADBEEF 003 jesus jesus :This server was created Wed Nov 05 00:58:02 +0900 2008
+[DEBUG] >>> :0xDEADBEEF 004 jesus jesus :0xDEADBEEF 0.1 aAbBcCdDeEfFGhHiIjkKlLmMnNopPQrRsStUvVwWxXyYzZ0123459*@ bcdefFhiIklmnoPqstv
+[DEBUG] >>> :0xDEADBEEF 375 jesus  :MOTD
+[DEBUG] >>> :0xDEADBEEF 372 jesus  :Oh hai there.
+[DEBUG] >>> :0xDEADBEEF 372 jesus  :
+[DEBUG] >>> :0xDEADBEEF 372 jesus  :Welcome to Kookaburra - the Ruby
+[DEBUG] >>> :0xDEADBEEF 372 jesus  :IRC daemon with drb access.
+[DEBUG] >>> :0xDEADBEEF 372 jesus  :
+[DEBUG] >>> :0xDEADBEEF 372 jesus  :Kookaburra is built on top of
+[DEBUG] >>> :0xDEADBEEF 372 jesus  :ruby-ircd.
+[DEBUG] >>> :0xDEADBEEF 376 jesus  :End of /MOTD command.
+[DEBUG] >>> :jesus!~jesus@rumble.dev JOIN :#all
+[DEBUG] <<< USER SuttoL 8 * :Darcy Laycock
+[DEBUG] >>> :0xDEADBEEF 001 SuttoL SuttoL :Welcome to Cockatoo - SuttoL!SuttoL@rumble.dev
+[DEBUG] >>> :0xDEADBEEF 002 SuttoL SuttoL :Your host is 0xDEADBEEF, running version 0.1
+[DEBUG] >>> :0xDEADBEEF 003 SuttoL SuttoL :This server was created Wed Nov 05 00:58:02 +0900 2008
+[DEBUG] >>> :0xDEADBEEF 004 SuttoL SuttoL :0xDEADBEEF 0.1 aAbBcCdDeEfFGhHiIjkKlLmMnNopPQrRsStUvVwWxXyYzZ0123459*@ bcdefFhiIklmnoPqstv
+[DEBUG] >>> :0xDEADBEEF 375 SuttoL  :MOTD
+[DEBUG] >>> :0xDEADBEEF 372 SuttoL  :Oh hai there.
+[DEBUG] >>> :0xDEADBEEF 372 SuttoL  :
+[DEBUG] >>> :0xDEADBEEF 372 SuttoL  :Welcome to Kookaburra - the Ruby
+[DEBUG] >>> :0xDEADBEEF 372 SuttoL  :IRC daemon with drb access.
+[DEBUG] >>> :0xDEADBEEF 372 SuttoL  :
+[DEBUG] >>> :0xDEADBEEF 372 SuttoL  :Kookaburra is built on top of
+[DEBUG] >>> :0xDEADBEEF 372 SuttoL  :ruby-ircd.
+[DEBUG] >>> :0xDEADBEEF 376 SuttoL  :End of /MOTD command.
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev JOIN :#all
+[DEBUG] <<< JOIN #eotw,#all 
+[INFO]  Creating channel #eotw
+[DEBUG] >>> :jesus!~jesus@rumble.dev JOIN :#eotw
+[DEBUG] >>> :0xDEADBEEF 332 jesus #eotw :There is no topic
+[DEBUG] >>> :0xDEADBEEF 353 jesus = #eotw :@jesus
+[DEBUG] >>> :0xDEADBEEF 366 jesus #eotw  :End of /NAMES list.
+[DEBUG] >>> :0xDEADBEEF 332 jesus #all :All that is posted on Kookaburra
+[DEBUG] >>> :0xDEADBEEF 353 jesus = #all : SuttoL  jesus
+[DEBUG] >>> :0xDEADBEEF 366 jesus #all  :End of /NAMES list.
+[DEBUG] <<< JOIN #all,#general,#webjam 
+[DEBUG] >>> :0xDEADBEEF 332 SuttoL #all :All that is posted on Kookaburra
+[DEBUG] >>> :0xDEADBEEF 353 SuttoL = #all : SuttoL  jesus
+[DEBUG] >>> :0xDEADBEEF 366 SuttoL #all  :End of /NAMES list.
+[INFO]  Creating channel #general
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev JOIN :#general
+[DEBUG] >>> :0xDEADBEEF 332 SuttoL #general :There is no topic
+[DEBUG] >>> :0xDEADBEEF 353 SuttoL = #general :@SuttoL
+[DEBUG] >>> :0xDEADBEEF 366 SuttoL #general  :End of /NAMES list.
+[INFO]  Creating channel #webjam
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev JOIN :#webjam
+[DEBUG] >>> :0xDEADBEEF 332 SuttoL #webjam :There is no topic
+[DEBUG] >>> :0xDEADBEEF 353 SuttoL = #webjam :@SuttoL
+[DEBUG] >>> :0xDEADBEEF 366 SuttoL #webjam  :End of /NAMES list.
+[DEBUG] <<< MODE #eotw +sn
+[DEBUG] >>> :jesus!~jesus@rumble.dev MODE #eotw :+sn
+[DEBUG] <<< MODE #all
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev MODE #all :
+[DEBUG] <<< MODE #general +sn
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev MODE #general :+sn
+[DEBUG] <<< MODE #all
+[DEBUG] >>> :jesus!~jesus@rumble.dev MODE #all :
+[DEBUG] <<< MODE #webjam +sn
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev MODE #webjam :+sn
+[DEBUG] <<< WHO #all
+[DEBUG] >>> :0xDEADBEEF 352 jesus #all :SuttoL!~SuttoL@rumble.dev rumble.dev 0xDEADBEEF SuttoL H :0 Darcy Laycock
+[DEBUG] >>> :0xDEADBEEF 352 jesus #all :jesus!~jesus@rumble.dev rumble.dev 0xDEADBEEF jesus H :0 Darcy Laycock
+[DEBUG] >>> :0xDEADBEEF 315 jesus #all :End of /WHO list.
+[DEBUG] <<< PRIVMSG #general :Sutto: hi
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev PRIVMSG #all :Sutto: hi - from #general
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev PRIVMSG #all :Sutto: hi - from #general
+[DEBUG] <<< WHO #all
+[DEBUG] >>> :0xDEADBEEF 352 SuttoL #all :SuttoL!~SuttoL@rumble.dev rumble.dev 0xDEADBEEF SuttoL H :0 Darcy Laycock
+[DEBUG] >>> :0xDEADBEEF 352 SuttoL #all :jesus!~jesus@rumble.dev rumble.dev 0xDEADBEEF jesus H :0 Darcy Laycock
+[DEBUG] >>> :0xDEADBEEF 315 SuttoL #all :End of /WHO list.
+[DEBUG] <<< PRIVMSG #general :@Sutto ninjas!
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev PRIVMSG #all :@Sutto ninjas! - from #general
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev PRIVMSG #all :@Sutto ninjas! - from #general
+[DEBUG] >>> :Sutto!~unknown@cockatoo-server PRIVMSG #general :Sutto: oh hai
+[DEBUG] >>> :Sutto!~unknown@cockatoo-server PRIVMSG #all :Sutto: oh hai - from #general
+[DEBUG] >>> :Sutto!~unknown@cockatoo-server PRIVMSG #all :Sutto: oh hai - from #general
+[DEBUG] >>> PING :0xDEADBEEF
+[DEBUG] >>> PING :0xDEADBEEF
+[DEBUG] <<< PONG 0xDEADBEEF
+[INFO]  Got pong: 0xDEADBEEF
+[DEBUG] <<< PONG 0xDEADBEEF
+[INFO]  Got pong: 0xDEADBEEF
+[DEBUG] >>> PING :0xDEADBEEF
+[DEBUG] >>> PING :0xDEADBEEF
+[DEBUG] <<< PONG 0xDEADBEEF
+[INFO]  Got pong: 0xDEADBEEF
+[DEBUG] <<< PONG 0xDEADBEEF
+[INFO]  Got pong: 0xDEADBEEF
+[DEBUG] >>> PING :0xDEADBEEF
+[DEBUG] >>> PING :0xDEADBEEF
+[DEBUG] <<< PONG 0xDEADBEEF
+[INFO]  Got pong: 0xDEADBEEF
+[DEBUG] <<< PONG 0xDEADBEEF
+[INFO]  Got pong: 0xDEADBEEF
+[DEBUG] >>> :Sutto!~unknown@cockatoo-server PRIVMSG #general :Sutto: lol wut?
+[DEBUG] >>> :Sutto!~unknown@cockatoo-server PRIVMSG #all :Sutto: lol wut? - from #general
+[DEBUG] >>> :Sutto!~unknown@cockatoo-server PRIVMSG #all :Sutto: lol wut? - from #general
+[DEBUG] >>> :Sutto!~unknown@cockatoo-server PRIVMSG #general :Suttol is the bomb
+[DEBUG] >>> :Sutto!~unknown@cockatoo-server PRIVMSG #all :Suttol is the bomb - from #general
+[DEBUG] >>> :Sutto!~unknown@cockatoo-server PRIVMSG #all :Suttol is the bomb - from #general
+[ERROR] Exception: SIGHUP
+[INFO]  Starting Kookaburra
+[INFO]  Loading stored messages
+[INFO]  Initializing connection from 'rumble.dev'
+[DEBUG] >>> NOTICE AUTH :Kookaburra v0.1 initialized, welcome.
+[DEBUG] <<< NICK SuttoL
+[INFO]  Attemping to set nick to SuttoL
+[DEBUG] <<< USER SuttoL 8 * :Darcy Laycock
+[DEBUG] >>> :0xDEADBEEF 001 SuttoL SuttoL :Welcome to Cockatoo - SuttoL!SuttoL@rumble.dev
+[DEBUG] >>> :0xDEADBEEF 002 SuttoL SuttoL :Your host is 0xDEADBEEF, running version 0.1
+[DEBUG] >>> :0xDEADBEEF 003 SuttoL SuttoL :This server was created Wed Nov 05 01:37:50 +0900 2008
+[DEBUG] >>> :0xDEADBEEF 004 SuttoL SuttoL :0xDEADBEEF 0.1 aAbBcCdDeEfFGhHiIjkKlLmMnNopPQrRsStUvVwWxXyYzZ0123459*@ bcdefFhiIklmnoPqstv
+[DEBUG] >>> :0xDEADBEEF 375 SuttoL  :MOTD
+[DEBUG] >>> :0xDEADBEEF 372 SuttoL  :Oh hai there.
+[DEBUG] >>> :0xDEADBEEF 372 SuttoL  :
+[DEBUG] >>> :0xDEADBEEF 372 SuttoL  :Welcome to Kookaburra - the Ruby
+[DEBUG] >>> :0xDEADBEEF 372 SuttoL  :IRC daemon with drb access.
+[DEBUG] >>> :0xDEADBEEF 372 SuttoL  :
+[DEBUG] >>> :0xDEADBEEF 372 SuttoL  :Kookaburra is built on top of
+[DEBUG] >>> :0xDEADBEEF 372 SuttoL  :ruby-ircd.
+[DEBUG] >>> :0xDEADBEEF 376 SuttoL  :End of /MOTD command.
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev JOIN :#all
+[DEBUG] <<< JOIN #all,#general,#webjam 
+[DEBUG] >>> :0xDEADBEEF 332 SuttoL #all :All that is posted on Kookaburra
+[DEBUG] >>> :0xDEADBEEF 353 SuttoL = #all : SuttoL
+[DEBUG] >>> :0xDEADBEEF 366 SuttoL #all  :End of /NAMES list.
+[INFO]  Creating channel #general
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev JOIN :#general
+[DEBUG] >>> :0xDEADBEEF 332 SuttoL #general :There is no topic
+[DEBUG] >>> :0xDEADBEEF 353 SuttoL = #general :@SuttoL
+[DEBUG] >>> :0xDEADBEEF 366 SuttoL #general  :End of /NAMES list.
+[INFO]  Creating channel #webjam
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev JOIN :#webjam
+[DEBUG] >>> :0xDEADBEEF 332 SuttoL #webjam :There is no topic
+[DEBUG] >>> :0xDEADBEEF 353 SuttoL = #webjam :@SuttoL
+[DEBUG] >>> :0xDEADBEEF 366 SuttoL #webjam  :End of /NAMES list.
+[DEBUG] <<< MODE #all
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev MODE #all :
+[DEBUG] <<< MODE #general +sn
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev MODE #general :+sn
+[INFO]  Initializing connection from 'rumble.dev'
+[DEBUG] >>> NOTICE AUTH :Kookaburra v0.1 initialized, welcome.
+[DEBUG] <<< NICK jesus
+[INFO]  Attemping to set nick to jesus
+[DEBUG] <<< USER jesus 8 * :Darcy Laycock
+[DEBUG] >>> :0xDEADBEEF 001 jesus jesus :Welcome to Cockatoo - jesus!jesus@rumble.dev
+[DEBUG] >>> :0xDEADBEEF 002 jesus jesus :Your host is 0xDEADBEEF, running version 0.1
+[DEBUG] >>> :0xDEADBEEF 003 jesus jesus :This server was created Wed Nov 05 01:37:50 +0900 2008
+[DEBUG] >>> :0xDEADBEEF 004 jesus jesus :0xDEADBEEF 0.1 aAbBcCdDeEfFGhHiIjkKlLmMnNopPQrRsStUvVwWxXyYzZ0123459*@ bcdefFhiIklmnoPqstv
+[DEBUG] >>> :0xDEADBEEF 375 jesus  :MOTD
+[DEBUG] >>> :0xDEADBEEF 372 jesus  :Oh hai there.
+[DEBUG] >>> :0xDEADBEEF 372 jesus  :
+[DEBUG] >>> :0xDEADBEEF 372 jesus  :Welcome to Kookaburra - the Ruby
+[DEBUG] >>> :0xDEADBEEF 372 jesus  :IRC daemon with drb access.
+[DEBUG] >>> :0xDEADBEEF 372 jesus  :
+[DEBUG] >>> :0xDEADBEEF 372 jesus  :Kookaburra is built on top of
+[DEBUG] >>> :0xDEADBEEF 372 jesus  :ruby-ircd.
+[DEBUG] >>> :0xDEADBEEF 376 jesus  :End of /MOTD command.
+[DEBUG] >>> :jesus!~jesus@rumble.dev JOIN :#all
+[DEBUG] <<< JOIN #eotw,#all 
+[INFO]  Creating channel #eotw
+[DEBUG] >>> :jesus!~jesus@rumble.dev JOIN :#eotw
+[DEBUG] >>> :0xDEADBEEF 332 jesus #eotw :There is no topic
+[DEBUG] >>> :0xDEADBEEF 353 jesus = #eotw :@jesus
+[DEBUG] >>> :0xDEADBEEF 366 jesus #eotw  :End of /NAMES list.
+[DEBUG] >>> :0xDEADBEEF 332 jesus #all :All that is posted on Kookaburra
+[DEBUG] >>> :0xDEADBEEF 353 jesus = #all : SuttoL  jesus
+[DEBUG] >>> :0xDEADBEEF 366 jesus #all  :End of /NAMES list.
+[DEBUG] <<< MODE #eotw +sn
+[DEBUG] >>> :jesus!~jesus@rumble.dev MODE #eotw :+sn
+[DEBUG] <<< MODE #webjam +sn
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev MODE #webjam :+sn
+[DEBUG] <<< MODE #all
+[DEBUG] >>> :jesus!~jesus@rumble.dev MODE #all :
+[DEBUG] <<< QUIT Leaving...
+[ERROR] Exception: undefined method `quit' for #<GlobalChannel:0x5678f4>
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/irc_client.rb:312:in `handle_quit'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/irc_client.rb:311:in `each'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/irc_client.rb:311:in `handle_quit'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/irc_server.rb:74:in `handle_client_input'
+[ERROR] >> /Users/sutto/Code/Kookaburra/ircd/lib/irc_server.rb:25:in `receive_line'
+[ERROR] >> /opt/local/lib/ruby/gems/1.8/gems/eventmachine-0.12.0/lib/protocols/line_and_text.rb:43:in `receive_data'
+[ERROR] >> /opt/local/lib/ruby/gems/1.8/gems/eventmachine-0.12.0/lib/protocols/line_and_text.rb:42:in `each'
+[ERROR] >> /opt/local/lib/ruby/gems/1.8/gems/eventmachine-0.12.0/lib/protocols/line_and_text.rb:42:in `receive_data'
+[ERROR] >> /opt/local/lib/ruby/gems/1.8/gems/eventmachine-0.12.0/lib/eventmachine.rb:224:in `run_machine'
+[ERROR] >> /opt/local/lib/ruby/gems/1.8/gems/eventmachine-0.12.0/lib/eventmachine.rb:224:in `run'
+[ERROR] >> script/server:15
+[DEBUG] <<< PART #general Leaving...
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev PART #general :Leaving...
+[DEBUG] <<< PART #webjam Leaving...
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev PART #webjam :Leaving...
+[DEBUG] <<< PART #all Leaving...
+[DEBUG] <<< JOIN #webjam, #general, #all
+[INFO]  Creating channel #webjam
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev JOIN :#webjam
+[DEBUG] >>> :0xDEADBEEF 332 SuttoL #webjam :There is no topic
+[DEBUG] >>> :0xDEADBEEF 353 SuttoL = #webjam :@SuttoL
+[DEBUG] >>> :0xDEADBEEF 366 SuttoL #webjam  :End of /NAMES list.
+[INFO]  Creating channel #general
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev JOIN :#general
+[DEBUG] >>> :0xDEADBEEF 332 SuttoL #general :There is no topic
+[DEBUG] >>> :0xDEADBEEF 353 SuttoL = #general :@SuttoL
+[DEBUG] >>> :0xDEADBEEF 366 SuttoL #general  :End of /NAMES list.
+[DEBUG] >>> :0xDEADBEEF 332 SuttoL #all :All that is posted on Kookaburra
+[DEBUG] >>> :0xDEADBEEF 353 SuttoL = #all : SuttoL  jesus
+[DEBUG] >>> :0xDEADBEEF 366 SuttoL #all  :End of /NAMES list.
+[DEBUG] <<< MODE #webjam +sn
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev MODE #webjam :+sn
+[DEBUG] <<< MODE #general +sn
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev MODE #general :+sn
+[DEBUG] <<< JOIN #all 
+[DEBUG] >>> :0xDEADBEEF 332 SuttoL #all :All that is posted on Kookaburra
+[DEBUG] >>> :0xDEADBEEF 353 SuttoL = #all : SuttoL  jesus
+[DEBUG] >>> :0xDEADBEEF 366 SuttoL #all  :End of /NAMES list.
+[DEBUG] >>> PING :0xDEADBEEF
+[DEBUG] >>> PING :0xDEADBEEF
+[DEBUG] <<< PONG 0xDEADBEEF
+[INFO]  Got pong: 0xDEADBEEF
+[DEBUG] <<< PRIVMSG #webjam :Oh hai, I'm live from webja,
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev PRIVMSG #all :Oh hai, I'm live from webja, - from #webjam
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev PRIVMSG #all :Oh hai, I'm live from webja, - from #webjam
+[DEBUG] >>> PING :0xDEADBEEF
+[DEBUG] >>> PING :0xDEADBEEF
+[DEBUG] <<< PONG 0xDEADBEEF
+[INFO]  Got pong: 0xDEADBEEF
+[DEBUG] >>> :Sutto!~unknown@cockatoo-server PRIVMSG #general :Hola
+[DEBUG] >>> :Sutto!~unknown@cockatoo-server PRIVMSG #all :Hola - from #general
+[DEBUG] >>> :Sutto!~unknown@cockatoo-server PRIVMSG #all :Hola - from #general
+[DEBUG] >>> :Sutto!~unknown@cockatoo-server PRIVMSG #general :SuttoL: hi
+[DEBUG] >>> :Sutto!~unknown@cockatoo-server PRIVMSG #all :SuttoL: hi - from #general
+[DEBUG] >>> :Sutto!~unknown@cockatoo-server PRIVMSG #all :SuttoL: hi - from #general
+[DEBUG] >>> :JoePlumber!~unknown@cockatoo-server PRIVMSG #general :Hola from Twitteriffic
+[DEBUG] >>> :JoePlumber!~unknown@cockatoo-server PRIVMSG #all :Hola from Twitteriffic - from #general
+[DEBUG] >>> :JoePlumber!~unknown@cockatoo-server PRIVMSG #all :Hola from Twitteriffic - from #general
+[DEBUG] >>> :Sutto!~unknown@cockatoo-server PRIVMSG #webjam :#webjam is going to be awesome
+[DEBUG] >>> :Sutto!~unknown@cockatoo-server PRIVMSG #all :#webjam is going to be awesome - from #webjam
+[DEBUG] >>> :Sutto!~unknown@cockatoo-server PRIVMSG #all :#webjam is going to be awesome - from #webjam
+[DEBUG] >>> :Sutto!~unknown@cockatoo-server PRIVMSG #general :webjam: who do I vote for?
+[DEBUG] >>> :Sutto!~unknown@cockatoo-server PRIVMSG #all :webjam: who do I vote for? - from #general
+[DEBUG] >>> :Sutto!~unknown@cockatoo-server PRIVMSG #all :webjam: who do I vote for? - from #general
+[DEBUG] >>> :Hola!~unknown@cockatoo-server PRIVMSG #general :I am hola
+[DEBUG] >>> :Hola!~unknown@cockatoo-server PRIVMSG #all :I am hola - from #general
+[DEBUG] >>> :Hola!~unknown@cockatoo-server PRIVMSG #all :I am hola - from #general
+[DEBUG] <<< PONG 0xDEADBEEF
+[INFO]  Got pong: 0xDEADBEEF
+[DEBUG] >>> PING :0xDEADBEEF
+[DEBUG] >>> PING :0xDEADBEEF
+[DEBUG] <<< PONG 0xDEADBEEF
+[INFO]  Got pong: 0xDEADBEEF
+[DEBUG] <<< PRIVMSG #webjam :Ninjas
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev PRIVMSG #all :Ninjas - from #webjam
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev PRIVMSG #all :Ninjas - from #webjam
+[ERROR] Exception: SIGHUP
+[INFO]  Starting Kookaburra
+[INFO]  Loading stored messages
+[INFO]  Initializing connection from 'rumble.dev'
+[DEBUG] >>> NOTICE AUTH :Kookaburra v0.1 initialized, welcome.
+[DEBUG] <<< NICK webjam 
+[INFO]  Attemping to set nick to webjam
+[DEBUG] <<< USER WebjamBot 0 * :WebjamBot 
+[DEBUG] >>> :0xDEADBEEF 001 webjam webjam :Welcome to Cockatoo - webjam!WebjamBot@rumble.dev
+[DEBUG] >>> :0xDEADBEEF 002 webjam webjam :Your host is 0xDEADBEEF, running version 0.1
+[DEBUG] >>> :0xDEADBEEF 003 webjam webjam :This server was created Wed Nov 05 02:37:47 +0900 2008
+[DEBUG] >>> :0xDEADBEEF 004 webjam webjam :0xDEADBEEF 0.1 aAbBcCdDeEfFGhHiIjkKlLmMnNopPQrRsStUvVwWxXyYzZ0123459*@ bcdefFhiIklmnoPqstv
+[DEBUG] >>> :0xDEADBEEF 375 webjam  :MOTD
+[DEBUG] >>> :0xDEADBEEF 372 webjam  :Oh hai there.
+[DEBUG] >>> :0xDEADBEEF 372 webjam  :
+[DEBUG] >>> :0xDEADBEEF 372 webjam  :Welcome to Kookaburra - the Ruby
+[DEBUG] >>> :0xDEADBEEF 372 webjam  :IRC daemon with drb access.
+[DEBUG] >>> :0xDEADBEEF 372 webjam  :
+[DEBUG] >>> :0xDEADBEEF 372 webjam  :Kookaburra is built on top of
+[DEBUG] >>> :0xDEADBEEF 372 webjam  :ruby-ircd.
+[DEBUG] >>> :0xDEADBEEF 376 webjam  :End of /MOTD command.
+[DEBUG] >>> :webjam!~WebjamBot@rumble.dev JOIN :#all
+[DEBUG] <<< JOIN #general 
+[INFO]  Creating channel #general
+[DEBUG] >>> :webjam!~WebjamBot@rumble.dev JOIN :#general
+[DEBUG] >>> :0xDEADBEEF 332 webjam #general :There is no topic
+[DEBUG] >>> :0xDEADBEEF 353 webjam = #general :@webjam
+[DEBUG] >>> :0xDEADBEEF 366 webjam #general  :End of /NAMES list.
+[DEBUG] <<< JOIN #webjam 
+[INFO]  Creating channel #webjam
+[DEBUG] >>> :webjam!~WebjamBot@rumble.dev JOIN :#webjam
+[DEBUG] >>> :0xDEADBEEF 332 webjam #webjam :There is no topic
+[DEBUG] >>> :0xDEADBEEF 353 webjam = #webjam :@webjam
+[DEBUG] >>> :0xDEADBEEF 366 webjam #webjam  :End of /NAMES list.
+[INFO]  Initializing connection from 'rumble.dev'
+[DEBUG] >>> NOTICE AUTH :Kookaburra v0.1 initialized, welcome.
+[DEBUG] <<< NICK SuttoL
+[INFO]  Attemping to set nick to SuttoL
+[DEBUG] <<< USER SuttoL 8 * :Darcy Laycock
+[DEBUG] >>> :0xDEADBEEF 001 SuttoL SuttoL :Welcome to Cockatoo - SuttoL!SuttoL@rumble.dev
+[DEBUG] >>> :0xDEADBEEF 002 SuttoL SuttoL :Your host is 0xDEADBEEF, running version 0.1
+[DEBUG] >>> :0xDEADBEEF 003 SuttoL SuttoL :This server was created Wed Nov 05 02:37:47 +0900 2008
+[DEBUG] >>> :0xDEADBEEF 004 SuttoL SuttoL :0xDEADBEEF 0.1 aAbBcCdDeEfFGhHiIjkKlLmMnNopPQrRsStUvVwWxXyYzZ0123459*@ bcdefFhiIklmnoPqstv
+[DEBUG] >>> :0xDEADBEEF 375 SuttoL  :MOTD
+[DEBUG] >>> :0xDEADBEEF 372 SuttoL  :Oh hai there.
+[DEBUG] >>> :0xDEADBEEF 372 SuttoL  :
+[DEBUG] >>> :0xDEADBEEF 372 SuttoL  :Welcome to Kookaburra - the Ruby
+[DEBUG] >>> :0xDEADBEEF 372 SuttoL  :IRC daemon with drb access.
+[DEBUG] >>> :0xDEADBEEF 372 SuttoL  :
+[DEBUG] >>> :0xDEADBEEF 372 SuttoL  :Kookaburra is built on top of
+[DEBUG] >>> :0xDEADBEEF 372 SuttoL  :ruby-ircd.
+[DEBUG] >>> :0xDEADBEEF 376 SuttoL  :End of /MOTD command.
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev JOIN :#all
+[DEBUG] <<< JOIN #webjam,#general 
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev JOIN :#webjam
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev JOIN :#webjam
+[DEBUG] >>> :0xDEADBEEF 332 SuttoL #webjam :There is no topic
+[DEBUG] >>> :0xDEADBEEF 353 SuttoL = #webjam :SuttoL @webjam
+[DEBUG] >>> :0xDEADBEEF 366 SuttoL #webjam  :End of /NAMES list.
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev JOIN :#general
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev JOIN :#general
+[DEBUG] >>> :0xDEADBEEF 332 SuttoL #general :There is no topic
+[DEBUG] >>> :0xDEADBEEF 353 SuttoL = #general :SuttoL @webjam
+[DEBUG] >>> :0xDEADBEEF 366 SuttoL #general  :End of /NAMES list.
+[DEBUG] <<< MODE #webjam
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev MODE #webjam :
+[DEBUG] <<< MODE #general
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev MODE #general :
+[DEBUG] <<< WHO #webjam
+[DEBUG] >>> :0xDEADBEEF 352 SuttoL #webjam :SuttoL!~SuttoL@rumble.dev rumble.dev 0xDEADBEEF SuttoL H :0 Darcy Laycock
+[DEBUG] >>> :0xDEADBEEF 352 SuttoL #webjam :webjam!~WebjamBot@rumble.dev rumble.dev 0xDEADBEEF webjam H :0 WebjamBot 
+[DEBUG] >>> :0xDEADBEEF 315 SuttoL #webjam :End of /WHO list.
+[DEBUG] <<< WHO #general
+[DEBUG] >>> :0xDEADBEEF 352 SuttoL #general :SuttoL!~SuttoL@rumble.dev rumble.dev 0xDEADBEEF SuttoL H :0 Darcy Laycock
+[DEBUG] >>> :0xDEADBEEF 352 SuttoL #general :webjam!~WebjamBot@rumble.dev rumble.dev 0xDEADBEEF webjam H :0 WebjamBot 
+[DEBUG] >>> :0xDEADBEEF 315 SuttoL #general :End of /WHO list.
+[DEBUG] >>> :Hola!~unknown@cockatoo-server PRIVMSG #webjam :hola
+[DEBUG] >>> :Hola!~unknown@cockatoo-server PRIVMSG #webjam :hola
+[DEBUG] >>> :Hola!~unknown@cockatoo-server PRIVMSG #all :hola - from #webjam
+[DEBUG] >>> :Hola!~unknown@cockatoo-server PRIVMSG #all :hola - from #webjam
+[DEBUG] <<< PRIVMSG #webjam :Hola back, Hola
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev PRIVMSG #webjam :Hola back, Hola
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev PRIVMSG #all :Hola back, Hola - from #webjam
+[DEBUG] >>> :SuttoL!~SuttoL@rumble.dev PRIVMSG #all :Hola back, Hola - from #webjam
+[DEBUG] >>> :Hola!~unknown@cockatoo-server PRIVMSG #general :SuttoL: what's up?
+[DEBUG] >>> :Hola!~unknown@cockatoo-server PRIVMSG #general :SuttoL: what's up?
+[DEBUG] >>> :Hola!~unknown@cockatoo-server PRIVMSG #all :SuttoL: what's up? - from #general
+[DEBUG] >>> :Hola!~unknown@cockatoo-server PRIVMSG #all :SuttoL: what's up? - from #general
+[DEBUG] >>> :JoePlumber!~unknown@cockatoo-server PRIVMSG #webjam :Hi @SuttoL and @Hola
+[DEBUG] >>> :JoePlumber!~unknown@cockatoo-server PRIVMSG #webjam :Hi @SuttoL and @Hola
+[DEBUG] >>> :JoePlumber!~unknown@cockatoo-server PRIVMSG #all :Hi @SuttoL and @Hola - from #webjam
+[DEBUG] >>> :JoePlumber!~unknown@cockatoo-server PRIVMSG #all :Hi @SuttoL and @Hola - from #webjam
+[DEBUG] >>> :SomeoneElse!~unknown@cockatoo-server PRIVMSG #general :Roflcopter
+[DEBUG] >>> :SomeoneElse!~unknown@cockatoo-server PRIVMSG #general :Roflcopter
+[DEBUG] >>> :SomeoneElse!~unknown@cockatoo-server PRIVMSG #all :Roflcopter - from #general
+[DEBUG] >>> :SomeoneElse!~unknown@cockatoo-server PRIVMSG #all :Roflcopter - from #general
+[DEBUG] >>> :SomeoneElse!~unknown@cockatoo-server PRIVMSG #general :webjam: who should I vote for?
+[DEBUG] >>> :SomeoneElse!~unknown@cockatoo-server PRIVMSG #general :webjam: who should I vote for?
+[DEBUG] >>> :SomeoneElse!~unknown@cockatoo-server PRIVMSG #all :webjam: who should I vote for? - from #general
+[DEBUG] >>> :SomeoneElse!~unknown@cockatoo-server PRIVMSG #all :webjam: who should I vote for? - from #general
+[DEBUG] <<< PRIVMSG #general :SomeoneElse: I suggest voting for Darcy Laycock - (Talk #10) 
+[DEBUG] >>> :webjam!~WebjamBot@rumble.dev PRIVMSG #general :SomeoneElse: I suggest voting for Darcy Laycock - (Talk #10) 
+[DEBUG] >>> :webjam!~WebjamBot@rumble.dev PRIVMSG #all :SomeoneElse: I suggest voting for Darcy Laycock - (Talk #10)  - from #general
+[DEBUG] >>> :webjam!~WebjamBot@rumble.dev PRIVMSG #all :SomeoneElse: I suggest voting for Darcy Laycock - (Talk #10)  - from #general
+[DEBUG] <<< PRIVMSG #all :SomeoneElse: I suggest voting for Darcy Laycock - (Talk #10) 
+[DEBUG] >>> :JoePlumber!~unknown@cockatoo-server PRIVMSG #general :webjam: how do I vote?
+[DEBUG] >>> :JoePlumber!~unknown@cockatoo-server PRIVMSG #general :webjam: how do I vote?
+[DEBUG] >>> :JoePlumber!~unknown@cockatoo-server PRIVMSG #all :webjam: how do I vote? - from #general
+[DEBUG] >>> :JoePlumber!~unknown@cockatoo-server PRIVMSG #all :webjam: how do I vote? - from #general
+[DEBUG] <<< PRIVMSG #general :JoePlumber: Follow the Webjam team's instructions w/ our identifier which is 10 
+[DEBUG] >>> :webjam!~WebjamBot@rumble.dev PRIVMSG #general :JoePlumber: Follow the Webjam team's instructions w/ our identifier which is 10 
+[DEBUG] >>> :webjam!~WebjamBot@rumble.dev PRIVMSG #all :JoePlumber: Follow the Webjam team's instructions w/ our identifier which is 10  - from #general
+[DEBUG] >>> :webjam!~WebjamBot@rumble.dev PRIVMSG #all :JoePlumber: Follow the Webjam team's instructions w/ our identifier which is 10  - from #general
+[DEBUG] <<< PRIVMSG #all :JoePlumber: Follow the Webjam team's instructions w/ our identifier which is 10 
+[DEBUG] >>> :SomeoneElse!~unknown@cockatoo-server PRIVMSG #general :JoePlumber: 
+[DEBUG] >>> :SomeoneElse!~unknown@cockatoo-server PRIVMSG #general :JoePlumber: 
+[DEBUG] >>> :SomeoneElse!~unknown@cockatoo-server PRIVMSG #all :JoePlumber:  - from #general
+[DEBUG] >>> :SomeoneElse!~unknown@cockatoo-server PRIVMSG #all :JoePlumber:  - from #general
+[DEBUG] >>> PING :0xDEADBEEF
+[DEBUG] >>> PING :0xDEADBEEF
+[DEBUG] <<< PONG 0xDEADBEEF
+[INFO]  Got pong: 0xDEADBEEF
+[ERROR] Exception: SIGHUP

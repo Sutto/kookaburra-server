@@ -1,5 +1,5 @@
 class IRCChannel < SynchronizedStore
-    include NetUtils
+  
     attr_reader :name, :topic
     alias each_user each_value 
 
@@ -9,7 +9,7 @@ class IRCChannel < SynchronizedStore
         @topic = "There is no topic"
         @name = name
         @oper = []
-        carp "create channel: #{@name}"
+        Kookaburra.logger.info "Creating channel #{@name}"
     end
 
     def add(client)

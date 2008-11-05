@@ -23,6 +23,8 @@ class Kookaburra
       @@root = path
     end
     
+    def message_server; @@messsage_server ||= MessageServer.start; end
+    
     def host_name
       @@host_name ||= Socket.gethostname.split(/\./).shift
     end
@@ -48,7 +50,7 @@ class Kookaburra
   
     def setup_traps!
       trap("INT") do 
-          $message_server.dump
+          Kookaburra.message_server.dump
           system("kill -9 #{$$}")
       end
     end
@@ -58,7 +60,7 @@ class Kookaburra
     end
     
     def setup!
-      @@started_at = Time.now.to_s
+      @@started_at     = Time.now.to_s
       setup_verbosity!
       setup_logger!
       setup_traps!

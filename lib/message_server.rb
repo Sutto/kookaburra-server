@@ -1,7 +1,8 @@
 require 'drb'
 
 class MessageServer
-  include NetUtils
+  
+  def self.stored_messages_path; File.join(Kookaburra.root, "data/messages"); end
   
   @@base_id = 0
   
@@ -27,13 +28,21 @@ class MessageServer
     @mutex.synchronize do
       m = @messages.values.flatten
     end
-    return formatted(m)[-limit..-1]
+    return formatted(m).reverse[0..(limit - 1)]
   end
   
   def messages_for(chan)
     m = []
     @mutex.synchronize do
       m = @messages[chan.downcase] || []
+    end
+    formatted m
+  end
+  
+  def replies_to(username)
+    m = []
+    @mutex.synchronize do
+      m = @messages.values.flatten.select { |m| m.target[0] == ?#  && m.content =~ /(@#{username}|#{username}:)/i  }
     end
     formatted m
   end
@@ -59,7 +68,6 @@ class MessageServer
     # from is not online, so choose the correct item to do.
     if user_from.nil?
       target    = (to =~ /^[#\$&]+/ ? $channel_store[to] : $user_store[to])
-      carp "Target: #{target.class.name}"
       if !target.nil?
         prefix = ":#{from}!~unknown@cockatoo-server"
         if to =~ /^[#\$&]+/
@@ -70,9 +78,8 @@ class MessageServer
       end
       append_message from, to, text, !target.nil?
     else
-      carp "Sending privmsg (owner) to #{to} from #{from} w/ '#{text}'"
+      Kookaburra.logger.info "Sending privmsg #{to} from #{from} w/ '#{text}'"
       user_from.reply :privmsg, user_from.instance_variable_get("@usermsg"), to, text
-      carp "Sending privmsg (self) to #{to} from #{from} w/ '#{text}'"
       user_from.handle_privmsg to, text
     end
     return [@@base_id, from, to, text, Time.now, true]
@@ -97,36 +104,33 @@ class MessageServer
   end
   
   def start
-    $message_server = self
-    DRb.start_service('druby://localhost:9000', $message_server)
+    DRb.start_service('druby://localhost:9000', self)
   end
   
   def self.start
     c = self.new
     c.load
     c.start
+    return c
   end
   
   def dump
-    carp  "Dumping Data"
-    File.open("messages.data", "w+") do |f|
+    Kookaburra.logger.info "Writing out messages to file"
+    File.open(MessageServer.stored_messages_path, "w+") do |f|
       f.write Marshal.dump(@messages)
     end
   end
   
   def load
-    if File.exist?("messages.data")
-      carp "Loading data"
-      c = File.read("messages.data")
+    if File.exist?(MessageServer.stored_messages_path)
+      Kookaburra.logger.info "Loading stored messages"
+      c = File.read(MessageServer.stored_messages_path)
       @messages = Marshal.load(c)
-      carp "Messages: #{@messages.class} => #{@messages.size}"
       @@base_id = @messages.values.flatten.map { |m| m.message_id }.max || 0
-      carp "Data loaded!"
-      carp "Base id: #{@@base_id}"
     end
   rescue Exception => e
-    carp "Error loading data"
-    carp e
+    Kookaburra.logger.error "Couldn't reload stored messages"
+    Kookaburra.logger.debug_exception e
     @messages = {}
   end
   

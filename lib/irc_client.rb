@@ -1,5 +1,6 @@
+require File.join(File.dirname(__FILE__), "irc_replies")
+
 class IRCClient
-    include NetUtils
 
     attr_reader :nick, :user, :realname, :channels, :state, :server
 
@@ -11,7 +12,7 @@ class IRCClient
         @welcomed = false
         @nick_tries = 0
         @state = {}
-        carp "initializing connection from #{@peername}"
+        Kookaburra.logger.info "Initializing connection from '#{@peername}'"
     end
 
     def host
@@ -37,12 +38,11 @@ class IRCClient
     end
 
     def handle_pass(s)
-        carp "pass = #{s}"
         @pass = s
     end
     
     def handle_nick(s)
-        carp "nick => #{s}"
+        Kookaburra.logger.info "Attemping to set nick to #{s}"
         if $user_store[s].nil?
             userlist = {}
             if @nick.nil?
@@ -66,19 +66,19 @@ class IRCClient
                 user.reply :nick, s
             }
             @usermsg = ":#{@nick}!~#{@user}@#{@peername}"
-            $message_server.unviewed_for(self.nick).each do |message|
+            Kookaburra.message_server.unviewed_for(self.nick).each do |message|
               reply :privmsg, ":#{message.from}!~unknown@cockatoo-server-queue", self.nick, message.content
             end
-            $message_server.mark_as_viewed!(self.nick)
+            Kookaburra.message_server.mark_as_viewed!(self.nick)
         else
             #check if we are just nicking ourselves.
             unless $user_store[s] == self
                 #verify the connectivity of earlier guy
                 unless $user_store[s].closed?
-                    reply :numeric, ERR_NICKNAMEINUSE,"* #{s} ","Nickname is already in use."
+                    reply :numeric, IRCReplies::ERR_NICKNAMEINUSE,"* #{s} ","Nickname is already in use."
                     @nick_tries += 1
                     if @nick_tries > Kookaburra.max_nick_tries
-                        carp "kicking spurious user #{s} after #{@nick_tries} tries"
+                        Kookaburra.logger.info "Kicking user #{s} after #{@nick_tries} failed nick attempts"
                         handle_abort
                     end
                     return
@@ -128,68 +128,68 @@ class IRCClient
 
     def repl_welcome
         client = "#{@nick}!#{@user}@#{@peername}"
-        reply :numeric, RPL_WELCOME, @nick, "Welcome to Cockatoo - #{client}"
+        reply :numeric, IRCReplies::RPL_WELCOME, @nick, "Welcome to Cockatoo - #{client}"
     end
 
     def repl_yourhost
-        reply :numeric, RPL_YOURHOST, @nick, "Your host is #{@host}, running version #{@ver}"
+        reply :numeric, IRCReplies::RPL_YOURHOST, @nick, "Your host is #{@host}, running version #{@ver}"
     end
 
     def repl_created
-        reply :numeric, RPL_CREATED, @nick, "This server was created #{@starttime}"
+        reply :numeric, IRCReplies::RPL_CREATED, @nick, "This server was created #{@starttime}"
     end
 
     def repl_myinfo
-        reply :numeric, RPL_MYINFO, @nick, "#{@host} #{@ver} #{@serv.usermodes} #{@serv.channelmodes}"
+        reply :numeric, IRCReplies::RPL_MYINFO, @nick, "#{@host} #{@ver} #{@serv.usermodes} #{@serv.channelmodes}"
     end
 
     def repl_bounce(sever, port)
-        reply :numeric, RPL_BOUNCE ,"Try server #{server}, port #{port}"
+        reply :numeric, IRCReplies::RPL_BOUNCE ,"Try server #{server}, port #{port}"
     end
 
     def repl_ison()
         #XXX TODO
-        reply :numeric, RPL_ISON,"notimpl"
+        reply :numeric, IRCReplies::RPL_ISON,"notimpl"
     end
 
     def repl_away(nick, msg)
-        reply :numeric, RPL_AWAY, nick, msg
+        reply :numeric, IRCReplies::RPL_AWAY, nick, msg
     end
 
     def repl_unaway()
-        reply :numeric, RPL_UNAWAY, @nick,"You are no longer marked as being away"
+        reply :numeric, IRCReplies::RPL_UNAWAY, @nick,"You are no longer marked as being away"
     end
 
     def repl_nowaway()
-        reply :numeric, RPL_NOWAWAY, @nick,"You have been marked as being away"
+        reply :numeric, IRCReplies::RPL_NOWAWAY, @nick,"You have been marked as being away"
     end
 
     def repl_motd()
-        reply :numeric, RPL_MOTDSTART,'', "MOTD"
-        File.read("motd.txt").split("\n").each do |l|
-          reply :numeric, RPL_MOTD,'', l
+        reply :numeric, IRCReplies::RPL_MOTDSTART,'', "MOTD"
+        (@@motd_lines ||= File.read(File.join(Kookaburra.root, "data/motd")).split("\n")).each do |l|
+          reply :numeric, IRCReplies::RPL_MOTD,'', l
         end
-        reply :numeric, RPL_ENDOFMOTD,'', "End of /MOTD command."
+        reply :numeric, IRCReplies::RPL_ENDOFMOTD,'', "End of /MOTD command."
     end
 
     def repl_mode()
     end
 
     def send_nonick(nick)
-        reply :numeric, ERR_NOSUCHNICK, nick, "No such nick/channel"
+        reply :numeric, IRCReplies::ERR_NOSUCHNICK, nick, "No such nick/channel"
     end
 
     def send_nochannel(channel)
-        reply :numeric, ERR_NOSUCHCHANNEL, channel, "That channel doesn't exist"
+        reply :numeric, IRCReplies::ERR_NOSUCHCHANNEL, channel, "That channel doesn't exist"
     end
 
     def send_notonchannel(channel)
-        reply :numeric, ERR_NOTONCHANNEL, channel, "Not a member of that channel"
+        reply :numeric, IRCReplies::ERR_NOTONCHANNEL, channel, "Not a member of that channel"
     end
 
     def send_topic(channel)
         if $channel_store[channel]
-            reply :numeric, RPL_TOPIC,channel, $channel_store[channel].topic.to_s
+            reply :numeric, IRCReplies::RPL_TOPIC,channel, $channel_store[channel].topic.to_s
         else
             send_notonchannel channel
         end
@@ -202,15 +202,15 @@ class IRCClient
     def send_nameslist(channel)
         c =  $channel_store[channel]
         if c.nil?
-            carp "names failed :#{c}"
+            Kookaburra.logger.info "No known channel '#{channel}' when getting names list"
             return 
         end
         names = []
         c.each_user {|user|
             names << c.mode(user) + user.nick if user.nick
         }
-        reply :numeric, RPL_NAMREPLY,"= #{c.name}","#{names.join(' ')}"
-        reply :numeric, RPL_ENDOFNAMES,"#{c.name} ","End of /NAMES list."
+        reply :numeric, IRCReplies::RPL_NAMREPLY,"= #{c.name}","#{names.join(' ')}"
+        reply :numeric, IRCReplies::RPL_ENDOFNAMES,"#{c.name} ","End of /NAMES list."
     end
 
     def send_ping()
@@ -222,7 +222,7 @@ class IRCClient
             c = ch.strip
             if c !~ CHANNEL
                 send_nochannel(c)
-                carp "no such channel:#{c}"
+                Kookaburra.logger.info "Attemping to join invalid channel name '#{c}'"
                 return
             end
             channel = $channel_store.add(c)
@@ -231,7 +231,7 @@ class IRCClient
                 send_nameslist(c)
                 @channels << c
             else
-                carp "already joined #{c}"
+                Kookaburra.logger.info "User already joined #{c}"
             end
         }
     end
@@ -241,12 +241,14 @@ class IRCClient
     end
 
     def handle_pong(srv)
-        carp "got pong: #{srv}"
+        Kookaburra.logger.info "Got pong: #{srv}"
     end
 
     def handle_privmsg(target, msg)
         viewed = true
         case target.strip
+        when "#all"
+          return # Ignore messages from all
         when CHANNEL
             channel= $channel_store[target]
             if !channel.nil?
@@ -266,9 +268,9 @@ class IRCClient
             end
         end
         begin
-          $message_server.append_message(self.nick, target.strip, msg, viewed)
+          Kookaburra.message_server.append_message(self.nick, target.strip, msg, viewed)
         rescue Exception => e
-          carp e
+          Kookaburra.logger.debug_exception e
         end
     end
 
@@ -311,25 +313,25 @@ class IRCClient
             $channel_store[channel].quit(self, msg)
         end
         $user_store.delete(self.nick)
-        carp "#{self.nick} #{msg}"
+        Kookaburra.logger.info "#{self.nick} quit w/ message: #{msg}"
         @server.close_connection
     end
 
     def handle_topic(channel, topic)
-        carp "handle topic for #{channel}:#{topic}"
+        Kookaburra.logger.info  "handle topic for #{channel}: #{topic}"
         if topic.nil? or topic =~ /^ *$/
             send_topic(channel)
         else
             begin
                 $channel_store[channel].topic(topic,self)
             rescue Exception => e
-                carp e
+                Kookaburra.logger.debug_exception e
             end
         end
     end
 
     def handle_away(msg)
-        carp "handle away :#{msg}"
+        Kookaburra.logger.info "Away w/ message: #{msg}"
         if msg.nil? or msg =~ /^ *$/
             @state.delete(:away)
             repl_unaway
@@ -340,35 +342,35 @@ class IRCClient
     end
         
     def handle_list(channel)
-        reply :numeric, RPL_LISTSTART
+        reply :numeric, IRCReplies::RPL_LISTSTART
         case channel.strip
         when /^#/
             channel.split(/,/).each {|cname|
                 c = $channel_store[cname.strip]
-                reply :numeric, RPL_LIST, c.name, c.topic if c
+                reply :numeric, IRCReplies::RPL_LIST, c.name, c.topic if c
             }
         else
             #older opera client sends LIST <1000
             #we wont obey the boolean after list, but allow the listing
             #nonetheless
             $channel_store.each_channel {|c|
-                reply :numeric, RPL_LIST, c.name, c.topic
+                reply :numeric, IRCReplies::RPL_LIST, c.name, c.topic
             }
         end
-        reply :numeric, RPL_LISTEND
+        reply :numeric, IRCReplies::RPL_LISTEND
     end
 
     def handle_whois(target,nicks)
         #ignore target for now.
-        return reply(:numeric, RPL_NONICKNAMEGIVEN, "", "No nickname given") if nicks.strip.length == 0
+        return reply(:numeric, IRCReplies::RPL_NONICKNAMEGIVEN, "", "No nickname given") if nicks.strip.length == 0
         nicks.split(/,/).each {|nick|
             nick.strip!
             user = $user_store[nick]
             if user
-                reply :numeric, RPL_WHOISUSER, "#{user.nick} #{user.user} #{user.host} *", "#{user.realname}"
-                reply :numeric, RPL_WHOISCHANNELS, user.nick, "#{user.channels.join(' ')}"
+                reply :numeric, IRCReplies::RPL_WHOISUSER, "#{user.nick} #{user.user} #{user.host} *", "#{user.realname}"
+                reply :numeric, IRCReplies::RPL_WHOISCHANNELS, user.nick, "#{user.channels.join(' ')}"
                 repl_away user.nick, user.state[:away] if !user.state[:away].nil?
-                reply :numeric, RPL_ENDOFWHOIS, user.nick, "End of /WHOIS list"
+                reply :numeric, IRCReplies::RPL_ENDOFWHOIS, user.nick, "End of /WHOIS list"
             else
                 return send_nonick(nick) 
             end
@@ -385,19 +387,19 @@ class IRCClient
         if channel.nil?
             #match against all users
             $user_store.each_user {|user|
-                reply :numeric, RPL_WHOREPLY ,
+                reply :numeric, IRCReplies::RPL_WHOREPLY ,
                     "#{user.channels[0]} #{user.userprefix} #{user.host} #{Kookaburra.host_name} #{user.nick} H" , 
                     "#{hopcount} #{user.realname}" if File.fnmatch?(mask, "#{user.host}.#{user.realname}.#{user.nick}")
             }
-            reply :numeric, RPL_ENDOFWHO, mask, "End of /WHO list."
+            reply :numeric, IRCReplies::RPL_ENDOFWHO, mask, "End of /WHO list."
         else
             #get all users in the channel
             channel.each_user {|user|
-                reply :numeric, RPL_WHOREPLY ,
+                reply :numeric, IRCReplies::RPL_WHOREPLY ,
                     "#{mask} #{user.userprefix} #{user.host} #{Kookaburra.host_name} #{user.nick} H" , 
                     "#{hopcount} #{user.realname}"
             }
-            reply :numeric, RPL_ENDOFWHO, mask, "End of /WHO list."
+            reply :numeric, IRCReplies::RPL_ENDOFWHO, mask, "End of /WHO list."
         end
     end
 
@@ -411,7 +413,7 @@ class IRCClient
             user = $user_store[nick]
             info << user.nick + '=-' + user.nick + '@' + user.peer
         }
-        reply :numeric, RPL_USERHOST,"", info.join(' ')
+        reply :numeric, IRCReplies::RPL_USERHOST,"", info.join(' ')
     end
 
     def handle_reload(password)
@@ -422,7 +424,7 @@ class IRCClient
     end
         
     def handle_version()
-        reply :numeric, RPL_VERSION, "v#{Kookaburra.version} Kookaburra", ""
+        reply :numeric, IRCReplies::RPL_VERSION, "v#{Kookaburra.version} Kookaburra", ""
     end
     
     def handle_eval(s)
@@ -430,8 +432,8 @@ class IRCClient
     end
 
     def handle_unknown(s)
-        carp "unknown:>#{s}<"
-        reply :numeric, ERR_UNKNOWNCOMMAND,s, "Unknown command"
+        Kookaburra.logger.warn "Unkwown command: #{s}"
+        reply :numeric, IRCReplies::ERR_UNKNOWNCOMMAND,s, "Unknown command"
     end
 
     def handle_connect
@@ -486,11 +488,10 @@ class IRCClient
     
     def raw(arg, abrt=false)
         begin
-        carp "--> #{arg}"
+        Kookaburra.logger.debug ">>> #{arg}"
         @server.send_data arg.chomp + "\r\n" if !arg.nil?
         rescue Exception => e
-            carp "<#{self.userprefix}>#{e.message}"
-            #puts e.backtrace.join("\n")
+            Kookaburra.logger.debug_exception e
             handle_abort()
             raise e if abrt
         end

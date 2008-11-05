@@ -7,11 +7,11 @@ Kookaburra.root = base_path
 
 Kookaburra.setup!
 Kookaburra.logger.info "Starting Kookaburra"
-
-MessageServer.start
+# Access the message server.
+Kookaburra.message_server
 
 begin
-  
+
     EventMachine::run do
       EventMachine::add_periodic_timer(300) { IRCServer.ping_all }
       EventMachine::start_server "0.0.0.0", 6667, IRCServer

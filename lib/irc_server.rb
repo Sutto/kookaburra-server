@@ -6,7 +6,6 @@ class IRCServer < EventMachine::Protocols::LineAndTextProtocol
       @@connections.delete self
     end
     
-    include NetUtils
     def usermodes
         return "aAbBcCdDeEfFGhHiIjkKlLmMnNopPQrRsStUvVwWxXyYzZ0123459*@"
     end
@@ -22,14 +21,9 @@ class IRCServer < EventMachine::Protocols::LineAndTextProtocol
     end
     
     def receive_line(line)
-      carp "Recieved line: #{line}"
-      s = Time.now
-      begin
-        handle_client_input(line, @client)
-      rescue Exception => e
-        carp e
-      end
-      carp "Line processed in #{Time.now.to_f - s.to_f} seconds"
+      handle_client_input(line, @client)
+    rescue Exception => e
+      Kookaburra.logger.debug_exception e
     end
     
     def connection_completed
@@ -37,13 +31,8 @@ class IRCServer < EventMachine::Protocols::LineAndTextProtocol
     end
 
     def handle_client_input(input, client)
-        carp "<-- #{input}"
-        s = if input =~ PREFIX
-                $1
-            else
-                input
-            end
-        carp "Processing line"
+        Kookaburra.logger.debug "<<< #{input}"
+        s = (input =~ PREFIX ? $1 : input)
         case s
         when /^[ ]*$/
             return
@@ -113,7 +102,6 @@ class IRCServer < EventMachine::Protocols::LineAndTextProtocol
         else
             client.handle_unknown(s)
         end
-        carp "Handled"
     end
     
     def self.ping_all
