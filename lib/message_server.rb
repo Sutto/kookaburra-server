@@ -81,7 +81,7 @@ class MessageServer
       append_message from, to, text, !target.nil?
     else
       Kookaburra.logger.info "Sending privmsg #{to} from #{from} w/ '#{text}'"
-      user_from.reply :privmsg, user_from.instance_variable_get("@usermsg"), to, text
+      user_from.reply :privmsg, user_from.userprefix, to, text
       user_from.handle_privmsg to, text
     end
     return [@@base_id, from, to, text, Time.now, true]
@@ -98,7 +98,7 @@ class MessageServer
   end
   
   def formatted(m = [])
-    return filter_public(m).sort_by { |m| m.created_at }.map { |message| [message.message_id, message.from, message.target, message.content, message.created_at, message.viewed ] }
+    return filter_public(m).sort_by { |m| m.created_at }.map { |m| m.values }
   end
   
   def filter_public(m = [])

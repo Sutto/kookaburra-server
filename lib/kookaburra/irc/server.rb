@@ -5,10 +5,6 @@ module Kookaburra
       
       @@connections = []
 
-      def connection_completed
-        @@connections.delete self
-      end
-
       def usermodes
           return "aAbBcCdDeEfFGhHiIjkKlLmMnNopPQrRsStUvVwWxXyYzZ0123459*@"
       end
@@ -28,9 +24,11 @@ module Kookaburra
       rescue Exception => e
         Kookaburra.logger.debug_exception e
       end
-
-      def connection_completed
+      
+      # Handle a closed connection.
+      def unbind
         @client.handle_abort
+        @@connections.delete self
       end
 
       def handle_client_input(input, client)

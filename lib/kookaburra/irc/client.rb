@@ -202,15 +202,21 @@ module Kookaburra
           return 
         end
         names = []
-        c.each_user {|user|
+        c.each_user do |user|
           names << c.mode(user) + user.nick if user.nick
-        }
+        end
         reply :numeric, Replies::RPL_NAMREPLY,"= #{c.name}","#{names.join(' ')}"
         reply :numeric, Replies::RPL_ENDOFNAMES,"#{c.name} ","End of /NAMES list."
       end
 
       def send_ping
-        reply :ping, Kookaburra::Settings.host_name
+        if Kookaburra::Stores.pings[self.nick] > Kookaburra::Settings.max_pings
+          Kookaburra.logger.fatal "#{self.nick} hasn't responded to pings."
+          self.server.close_connection
+        else
+          Kookaburra::Stores.pings[self.nick] += 1
+          reply :ping, Kookaburra::Settings.host_name
+        end
       end
 
       def handle_join(channels)
@@ -238,6 +244,10 @@ module Kookaburra
 
       def handle_pong(srv)
         Kookaburra.logger.info "Got pong: #{srv}"
+        # If we have more than one outstanding ping,
+        # We decrease the outstanding count.
+        #Kookaburra::Stores.pings[self.nick] -= 1 if Kookaburra::Stores.pings[self.nick] > 0
+        Kookaburra.logger.info "Ping count for #{self.nick} - #{Kookaburra::Stores.pings[self.nick]}"
       end
 
       def handle_privmsg(target, msg)
@@ -356,7 +366,7 @@ module Kookaburra
       def handle_whois(target,nicks)
         #ignore target for now.
         return reply(:numeric, Replies::RPL_NONICKNAMEGIVEN, "", "No nickname given") if nicks.strip.length == 0
-        nicks.split(/,/).each {|nick|
+        nicks.split(/,/).each do |nick|
           nick.strip!
           user = Kookaburra::Stores.users[nick]
           if user
@@ -367,7 +377,7 @@ module Kookaburra
           else
             return send_nonick(nick) 
           end
-        }
+        end
       end
 
       def handle_names(channels, server)
@@ -413,7 +423,7 @@ module Kookaburra
       end
 
       def handle_abort
-        handle_quit('aborted..')
+        handle_quit('no can has power')
       end
 
       def handle_version
