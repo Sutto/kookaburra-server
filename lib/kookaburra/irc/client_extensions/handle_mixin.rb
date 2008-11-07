@@ -28,23 +28,23 @@ module Kookaburra
               userlist[s] = self if self.nick != s
               Kookaburra::Stores.users.delete(@nick)
               @nick = s
-            end
-            Kookaburra::Stores.users[self.nick] = self
-            #send the info to the world
-            #get unique users.
-            @channels.each  do |c|
-              Kookaburra::Stores.channels[c].each_user do |u|
-                userlist[u.nick] = u
+              Kookaburra::Stores.users[self.nick] = self
+              #send the info to the world
+              #get unique users.
+              @channels.each  do |c|
+                Kookaburra::Stores.channels[c].each_user do |u|
+                  userlist[u.nick] = u
+                end
               end
+              userlist.values.each do |user|
+                user.reply :nick, s
+              end
+              @usermsg = ":#{@nick}!~#{@user}@#{@peername}"
+              Kookaburra.message_server.unviewed_for(self.nick).each do |message|
+                reply :privmsg, ":#{message.from}!~unknown@cockatoo-server-queue", self.nick, message.content
+              end
+              Kookaburra.message_server.mark_as_viewed!(self.nick)
             end
-            userlist.values.each do |user|
-              user.reply :nick, s
-            end
-            @usermsg = ":#{@nick}!~#{@user}@#{@peername}"
-            Kookaburra.message_server.unviewed_for(self.nick).each do |message|
-              reply :privmsg, ":#{message.from}!~unknown@cockatoo-server-queue", self.nick, message.content
-            end
-            Kookaburra.message_server.mark_as_viewed!(self.nick)
           else
             #check if we are just nicking ourselves.
             unless Kookaburra::Stores.users[s] == self

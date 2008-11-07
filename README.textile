@@ -1,6 +1,8 @@
 h1. Kookaburra - a Ruby IRCD
 
-Kookaburra is an simple open source IRCD written in Ruby.
+!http://blog.ninjahideout.com/uploads/datas/123/original/logo.png!
+
+Kookaburra-Server simple open source IRCD written in Ruby.
 
 It's a fork of "ruby-ircd":http://code.google.com/p/ruby-ircd/ with 
 some new work done (note: I'm moving towards rewriting everything).
@@ -25,5 +27,11 @@ To use, try:
 h2. Todo
 
 # Tests tests tests!
+# Massive refactoring / clean up of the code
+# Extensive testing
+# Ninjas!
+# less-hacked together interface
+# Move towards Marvin-esque handlers / events system
+# Oh, did I mention tests?
 
 Kudos!
