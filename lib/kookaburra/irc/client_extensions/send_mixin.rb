@@ -55,6 +55,7 @@ module Kookaburra
         def send_ping
           if Kookaburra::Stores.pings[self.nick] > Kookaburra::Settings.max_pings
             Kookaburra.logger.fatal "#{self.nick} hasn't responded to pings."
+            Kookaburra::Stores.pings[self.nick] = 0
             self.server.close_connection
           else
             Kookaburra::Stores.pings[self.nick] += 1

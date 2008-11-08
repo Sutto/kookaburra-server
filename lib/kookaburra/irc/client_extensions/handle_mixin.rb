@@ -20,7 +20,7 @@ module Kookaburra
 
         def handle_nick(s)
           Kookaburra.logger.info "Attemping to set nick to #{s}"
-          if Kookaburra::Stores.users[s].nil?
+          if !s.blank? && Kookaburra::Stores.users[s].nil?
             userlist = {}
             if @nick.nil?
               handle_newconnect(s)
@@ -28,26 +28,27 @@ module Kookaburra
               userlist[s] = self if self.nick != s
               Kookaburra::Stores.users.delete(@nick)
               @nick = s
-              Kookaburra::Stores.users[self.nick] = self
-              #send the info to the world
-              #get unique users.
-              @channels.each  do |c|
-                Kookaburra::Stores.channels[c].each_user do |u|
-                  userlist[u.nick] = u
-                end
-              end
-              userlist.values.each do |user|
-                user.reply :nick, s
-              end
-              @usermsg = ":#{@nick}!~#{@user}@#{@peername}"
-              Kookaburra.message_server.unviewed_for(self.nick).each do |message|
-                reply :privmsg, ":#{message.from}!~unknown@cockatoo-server-queue", self.nick, message.content
-              end
-              Kookaburra.message_server.mark_as_viewed!(self.nick)
             end
+            Kookaburra::Stores.users[self.nick] = self
+            #send the info to the world
+            #get unique users.
+            @channels.each  do |c|
+              Kookaburra::Stores.channels[c].each_user do |u|
+                userlist[u.nick] = u
+              end
+            end
+            userlist.values.each do |user|
+              user.reply :nick, s
+            end
+            @usermsg = ":#{@nick}!~#{@user}@#{@peername}"
+            Kookaburra.message_server.unviewed_for(self.nick).each do |message|
+              reply :privmsg, ":#{message.from}!~unknown@cockatoo-server-queue", self.nick, message.content
+            end
+            Kookaburra.message_server.mark_as_viewed!(self.nick)
           else
             #check if we are just nicking ourselves.
             unless Kookaburra::Stores.users[s] == self
+              Kookaburra.logger.info "Nick #{s} is taken, responding."
               reply :numeric, Replies::ERR_NICKNAMEINUSE, "* #{s} ","Nickname is already in use."
               @nick_tries += 1
               if @nick_tries > Kookaburra::Settings.max_nick_tries
@@ -69,6 +70,7 @@ module Kookaburra
         end
         
         def handle_join(channels)
+          #return if @nick.blank?
           channels.split(/,/).each do |ch|
             c = ch.strip
             if c !~ CHANNEL
@@ -95,11 +97,12 @@ module Kookaburra
           Kookaburra.logger.info "Got pong: #{srv}"
           # If we have more than one outstanding ping,
           # We decrease the outstanding count.
-          #Kookaburra::Stores.pings[self.nick] -= 1 if Kookaburra::Stores.pings[self.nick] > 0
+          Kookaburra::Stores.pings[self.nick] -= 1 if Kookaburra::Stores.pings[self.nick] > 0
           Kookaburra.logger.info "Ping count for #{self.nick} - #{Kookaburra::Stores.pings[self.nick]}"
         end
 
         def handle_privmsg(target, msg)
+          #return if @nick.blank?
           viewed = true
           case target.strip
           when "#all"
@@ -130,6 +133,7 @@ module Kookaburra
         end
 
         def handle_notice(target, msg)
+          #return if @nick.blank?
           case target.strip
           when CHANNEL
             channel= Kookaburra::Stores.channels[target]
@@ -173,6 +177,7 @@ module Kookaburra
         end
 
         def handle_topic(channel, topic)
+          #return if @nick.blank?
           Kookaburra.logger.info  "handle topic for #{channel}: #{topic}"
           if topic.nil? or topic =~ /^ *$/
             send_topic(channel)
@@ -261,10 +266,10 @@ module Kookaburra
 
         def handle_userhost(nicks)
           info = []
-          nicks.split(/,/).each {|nick|
+          nicks.split(/,/).each do |nick|
             user = Kookaburra::Stores.users[nick]
             info << user.nick + '=-' + user.nick + '@' + user.peer
-          }
+          end
           reply :numeric, Replies::RPL_USERHOST,"", info.join(' ')
         end
 
@@ -291,7 +296,6 @@ module Kookaburra
         def handle_connect
           reply :raw, "NOTICE AUTH :Kookaburra v#{Kookaburra::VERSION} initialized, welcome."
         end
-        
         
       end
     end
