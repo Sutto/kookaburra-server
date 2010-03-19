@@ -21,8 +21,8 @@ h2. Usage
 
 To use, try:
 
-  sudo gem install eventmachine extlib configatron
-  ./script/server
+    sudo gem install eventmachine extlib configatron
+    ./script/server
 
 h2. Todo
 
